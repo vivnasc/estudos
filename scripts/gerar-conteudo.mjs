@@ -1,171 +1,148 @@
 // scripts/gerar-conteudo.mjs
 //
-// Lê as pastas do repositório (cursos/* e disciplina-partilhada) e produz:
-//   - lib/conteudo.json  → dados que a PWA renderiza (áreas, aulas,
-//     sínteses, flashcards, banco de produto)
-//   - public/material/<area>/<ficheiro>.pdf → cópia dos PDFs de referência
+// Lê o repositório (cursos/<curso>/<cadeira>/... e disciplina-partilhada) e
+// produz a árvore que a PWA renderiza:
+//   - lib/conteudo.json
+//   - public/material/<curso>/<cadeira|__curso>/<ficheiro>.pdf (cópia dos PDFs)
 //
-// Corre automaticamente antes do `next build` (script "prebuild").
-// Não é preciso tocar aqui para adicionar um curso: basta criar a pasta.
+// Hierarquia: Curso → Cadeira → Aulas. Uma cadeira é qualquer subpasta de um
+// curso (exceto _material). A disciplina-partilhada é uma cadeira comum aos 3.
+// Adicionar curso/cadeira = criar pasta — sem tocar aqui.
 
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-// A app vive na raiz do repositório; este script está em scripts/.
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT_JSON = path.join(ROOT, "lib", "conteudo.json");
 const OUT_MATERIAL = path.join(ROOT, "public", "material");
-
 const TEMAS = ["corpo", "amor", "maternidade", "prosperidade"];
+const ESPECIAIS = new Set(["_material", "_audio", "transcricoes", "sinteses", "produto"]);
 
-// --- helpers ----------------------------------------------------------------
 const existe = (p) => fs.existsSync(p);
 const lerTxt = (p) => (existe(p) ? fs.readFileSync(p, "utf-8") : "");
+const isDir = (p) => existe(p) && fs.statSync(p).isDirectory();
 
-function prettifyArea(id) {
-  return id
-    .replace(/^\d+[-_]/, "")
-    .replace(/[-_]+/g, " ")
+function prettify(id) {
+  return id.replace(/^\d+[-_]/, "").replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim()
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
-function prettifyAula(nome) {
-  return nome.replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim();
-}
 
-// Extrai flashcards (P:/R:) da síntese e devolve {flashcards, sinteseSemCards}
 function extrairFlashcards(md) {
   const linhas = md.split(/\r?\n/);
   const cards = [];
   const mantidas = [];
-  let pendente = null;
   for (const linha of linhas) {
     const mP = linha.match(/^\s*P:\s*(.+\S)\s*$/i);
     const mR = linha.match(/^\s*R:\s*(.+\S)\s*$/i);
-    if (mP) {
-      pendente = { p: mP[1].trim(), r: "" };
-      continue;
-    }
-    if (mR && pendente) {
-      pendente.r = mR[1].trim();
-      cards.push(pendente);
-      pendente = null;
-      continue;
-    }
+    if (mP) { cards.push({ p: mP[1].trim(), r: "" }); continue; }
+    if (mR && cards.length && !cards[cards.length - 1].r) { cards[cards.length - 1].r = mR[1].trim(); continue; }
     mantidas.push(linha);
   }
-  // remove linhas em branco a mais deixadas pela extração
-  const sinteseSemCards = mantidas.join("\n").replace(/\n{3,}/g, "\n\n").trim();
-  return { flashcards: cards, sinteseSemCards };
+  return { flashcards: cards, sinteseSemCards: mantidas.join("\n").replace(/\n{3,}/g, "\n\n").trim() };
 }
 
-// Divide o markdown de produto em itens etiquetados por tema [corpo] etc.
-function extrairItensProduto(md, area, areaTitulo, aula) {
+function extrairItensProduto(md, fonte) {
   const linhas = md.split(/\r?\n/);
   const itens = [];
   let atual = null;
-  const flush = () => {
-    if (atual && atual.texto.trim()) itens.push(atual);
-    atual = null;
-  };
+  const flush = () => { if (atual && atual.texto.trim()) itens.push(atual); atual = null; };
   for (const linha of linhas) {
-    const tags = [...linha.matchAll(/\[(corpo|amor|maternidade|prosperidade)\]/gi)].map((m) =>
-      m[1].toLowerCase()
-    );
+    const tags = [...linha.matchAll(/\[(corpo|amor|maternidade|prosperidade)\]/gi)].map((m) => m[1].toLowerCase());
     if (tags.length) {
       flush();
       const texto = linha.replace(/\[(corpo|amor|maternidade|prosperidade)\]/gi, "").replace(/^[\s\-*•:]+/, "").trim();
-      atual = { temas: [...new Set(tags)], texto, area, areaTitulo, aula };
+      atual = { temas: [...new Set(tags)], texto, ...fonte };
     } else if (atual && linha.trim()) {
       atual.texto += "\n" + linha.trim();
-    } else if (atual) {
-      flush();
-    }
+    } else if (atual) { flush(); }
   }
   flush();
   return itens;
 }
 
-// --- recolha de áreas -------------------------------------------------------
-function recolherAreas() {
-  const dirs = [];
-  const cursosDir = path.join(ROOT, "cursos");
-  if (existe(cursosDir)) {
-    for (const nome of fs.readdirSync(cursosDir).sort()) {
-      const d = path.join(cursosDir, nome);
-      if (fs.statSync(d).isDirectory()) dirs.push({ id: nome, dir: d, tipo: "curso" });
-    }
+function copiarMaterial(srcDir, destRel) {
+  if (!isDir(srcDir)) return [];
+  const out = [];
+  const destDir = path.join(OUT_MATERIAL, destRel);
+  for (const f of fs.readdirSync(srcDir).sort()) {
+    if (!f.toLowerCase().endsWith(".pdf")) continue;
+    fs.mkdirSync(destDir, { recursive: true });
+    fs.copyFileSync(path.join(srcDir, f), path.join(destDir, f));
+    out.push({ nome: prettify(f.replace(/\.pdf$/i, "")), ficheiro: `material/${destRel}/${f}` });
   }
-  const partilhada = path.join(ROOT, "disciplina-partilhada");
-  if (existe(partilhada)) dirs.push({ id: "disciplina-partilhada", dir: partilhada, tipo: "partilhada" });
-  return dirs;
+  return out;
 }
 
-// --- main -------------------------------------------------------------------
+function lerAulas(cadeiraDir, fonte, banco) {
+  const sintDir = path.join(cadeiraDir, "sinteses");
+  const prodDir = path.join(cadeiraDir, "produto");
+  const transDir = path.join(cadeiraDir, "transcricoes");
+  const aulas = [];
+  if (!isDir(sintDir)) return aulas;
+  for (const f of fs.readdirSync(sintDir).sort()) {
+    if (!f.endsWith(".md")) continue;
+    const nome = f.replace(/\.md$/, "");
+    const { flashcards, sinteseSemCards } = extrairFlashcards(lerTxt(path.join(sintDir, f)));
+    const produtoMd = lerTxt(path.join(prodDir, `${nome}.md`));
+    banco.push(...extrairItensProduto(produtoMd, { ...fonte, aula: prettify(nome) }));
+    aulas.push({
+      nome,
+      titulo: prettify(nome),
+      sintese: sinteseSemCards,
+      flashcards,
+      temTranscricao: existe(path.join(transDir, `${nome}.txt`)),
+    });
+  }
+  return aulas;
+}
+
 function main() {
   fs.rmSync(OUT_MATERIAL, { recursive: true, force: true });
   fs.mkdirSync(path.dirname(OUT_JSON), { recursive: true });
   fs.mkdirSync(OUT_MATERIAL, { recursive: true });
 
-  const areas = [];
-  const banco = []; // itens de produto agregados
+  const banco = [];
+  const cursos = [];
 
-  for (const { id, dir, tipo } of recolherAreas()) {
-    const titulo =
-      tipo === "partilhada" ? "Disciplina Partilhada" : prettifyArea(id);
+  const cursosDir = path.join(ROOT, "cursos");
+  if (isDir(cursosDir)) {
+    for (const cursoId of fs.readdirSync(cursosDir).sort()) {
+      const cursoDir = path.join(cursosDir, cursoId);
+      if (!isDir(cursoDir)) continue;
+      const cursoTitulo = prettify(cursoId);
+      const materiaisCurso = copiarMaterial(path.join(cursoDir, "_material"), `${cursoId}/__curso`);
 
-    // materiais (PDFs) → copiar para public/material/<id>
-    const materialDir = path.join(dir, "_material");
-    const materiais = [];
-    if (existe(materialDir)) {
-      const destDir = path.join(OUT_MATERIAL, id);
-      fs.mkdirSync(destDir, { recursive: true });
-      for (const f of fs.readdirSync(materialDir).sort()) {
-        if (!f.toLowerCase().endsWith(".pdf")) continue;
-        fs.copyFileSync(path.join(materialDir, f), path.join(destDir, f));
-        materiais.push({ nome: prettifyAula(f.replace(/\.pdf$/i, "")), ficheiro: `material/${id}/${f}` });
+      const cadeiras = [];
+      for (const cadId of fs.readdirSync(cursoDir).sort()) {
+        if (ESPECIAIS.has(cadId) || cadId.startsWith(".")) continue;
+        const cadDir = path.join(cursoDir, cadId);
+        if (!isDir(cadDir)) continue;
+        const cadTitulo = prettify(cadId);
+        const materiais = copiarMaterial(path.join(cadDir, "_material"), `${cursoId}/${cadId}`);
+        const aulas = lerAulas(cadDir, { curso: cursoId, cursoTitulo, cadeira: cadId, areaTitulo: `${cursoTitulo} · ${cadTitulo}` }, banco);
+        cadeiras.push({ id: cadId, titulo: cadTitulo, materiais, aulas });
       }
+      cursos.push({ id: cursoId, titulo: cursoTitulo, materiais: materiaisCurso, cadeiras });
     }
-
-    // aulas = ficheiros de síntese
-    const sintDir = path.join(dir, "sinteses");
-    const prodDir = path.join(dir, "produto");
-    const transDir = path.join(dir, "transcricoes");
-    const aulas = [];
-    if (existe(sintDir)) {
-      for (const f of fs.readdirSync(sintDir).sort()) {
-        if (!f.endsWith(".md")) continue;
-        const nome = f.replace(/\.md$/, "");
-        const sinteseRaw = lerTxt(path.join(sintDir, f));
-        const { flashcards, sinteseSemCards } = extrairFlashcards(sinteseRaw);
-        const produtoMd = lerTxt(path.join(prodDir, `${nome}.md`));
-        const itens = extrairItensProduto(produtoMd, id, titulo, prettifyAula(nome));
-        banco.push(...itens);
-        aulas.push({
-          nome,
-          titulo: prettifyAula(nome),
-          sintese: sinteseSemCards,
-          flashcards,
-          temTranscricao: existe(path.join(transDir, `${nome}.txt`)),
-        });
-      }
-    }
-
-    areas.push({ id, tipo, titulo, materiais, aulas });
   }
 
-  const conteudo = {
-    geradoEm: new Date().toISOString(),
-    temas: TEMAS,
-    areas,
-    banco,
-  };
+  // Disciplina partilhada — cadeira comum aos 3 (uma só vez)
+  let partilhada = null;
+  const partDir = path.join(ROOT, "disciplina-partilhada");
+  if (isDir(partDir)) {
+    const titulo = "Disciplina Partilhada";
+    const materiais = copiarMaterial(path.join(partDir, "_material"), "disciplina-partilhada");
+    const aulas = lerAulas(partDir, { curso: "disciplina-partilhada", cursoTitulo: titulo, cadeira: "", areaTitulo: titulo }, banco);
+    partilhada = { id: "disciplina-partilhada", titulo, materiais, aulas };
+  }
+
+  const conteudo = { geradoEm: new Date().toISOString(), temas: TEMAS, cursos, partilhada, banco };
   fs.writeFileSync(OUT_JSON, JSON.stringify(conteudo, null, 2), "utf-8");
 
-  const nAulas = areas.reduce((s, a) => s + a.aulas.length, 0);
-  console.log(
-    `conteudo.json gerado: ${areas.length} área(s), ${nAulas} aula(s), ${banco.length} item(ns) de produto.`
-  );
+  const nCad = cursos.reduce((s, c) => s + c.cadeiras.length, 0);
+  const nAulas = cursos.reduce((s, c) => s + c.cadeiras.reduce((n, k) => n + k.aulas.length, 0), 0) + (partilhada?.aulas.length || 0);
+  console.log(`conteudo.json: ${cursos.length} curso(s), ${nCad} cadeira(s), ${nAulas} aula(s), ${banco.length} item(ns) de produto.`);
 }
 
 main();
