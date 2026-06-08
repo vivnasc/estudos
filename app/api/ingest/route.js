@@ -19,7 +19,8 @@ export async function POST(request) {
   } catch {
     return Response.json({ error: "Pedido inválido." }, { status: 400 });
   }
-  const { url, curso, cadeira, filename } = payload || {};
+  const { url, curso, cadeira, filename, modo } = payload || {};
+  const modoFinal = modo === "material" ? "material" : "aula";
 
   const token = process.env.GITHUB_DISPATCH_TOKEN;
   if (!token) {
@@ -67,7 +68,7 @@ export async function POST(request) {
       },
       body: JSON.stringify({
         ref,
-        inputs: { audio_url: url, curso: areaDir, filename: nomeFicheiro },
+        inputs: { audio_url: url, curso: areaDir, filename: nomeFicheiro, modo: modoFinal },
       }),
     }
   );

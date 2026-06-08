@@ -308,6 +308,17 @@ async function processarIngest() {
     throw new Error(`Ficheiro não encontrado em ${ficheiroPath}`);
   }
 
+  // Modo "material": a apostila/PDF é guardada como referência da disciplina
+  // (não vira aula). Passa a alimentar a síntese de cada aula seguinte.
+  if (process.env.INGEST_MODO === "material") {
+    const materialDir = path.join(area, "_material");
+    fs.mkdirSync(materialDir, { recursive: true });
+    const seguro = path.basename(filename).replace(/[^\w.\- ]+/g, "_").trim() || "apostila.pdf";
+    fs.copyFileSync(ficheiroPath, path.join(materialDir, seguro));
+    console.log(`[${area}] material de referência guardado: ${seguro}`);
+    return;
+  }
+
   const ext = path.extname(filename).toLowerCase();
   const nomeBase = path.basename(filename, path.extname(filename)) || "aula";
   const transDir = path.join(area, "transcricoes");

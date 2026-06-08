@@ -26,6 +26,7 @@ export default function Uploader({ cursos, partilhada }) {
   const cadeiras = destino?.cadeiras || [];
 
   const [cadeiraSel, setCadeiraSel] = useState(cadeiras[0]?.id || "");
+  const [modo, setModo] = useState("aula"); // "aula" = vira síntese · "material" = apostila/referência
   const [itens, setItens] = useState([]); // { file, status: fila|enviar|feito|erro, erro }
   const [correr, setCorrer] = useState(false);
   const [arrastar, setArrastar] = useState(false);
@@ -90,7 +91,7 @@ export default function Uploader({ cursos, partilhada }) {
         const resp = await fetch("/api/ingest", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ url: prep.publicUrl, curso: destinoId, cadeira: isPart ? "" : cadeiraSel, filename: file.name }),
+          body: JSON.stringify({ url: prep.publicUrl, curso: destinoId, cadeira: isPart ? "" : cadeiraSel, filename: file.name, modo }),
         });
         const data = await resp.json().catch(() => ({}));
         if (!resp.ok) throw new Error(data.error || `processar (${resp.status})`);
@@ -127,6 +128,17 @@ export default function Uploader({ cursos, partilhada }) {
         </label>
       )}
 
+      <div className="modo-tabs">
+        <button type="button" className={`modo-tab${modo === "aula" ? " on" : ""}`} onClick={() => setModo("aula")} disabled={correr}>
+          Aulas
+          <span>cada ficheiro vira síntese + flashcards</span>
+        </button>
+        <button type="button" className={`modo-tab${modo === "material" ? " on" : ""}`} onClick={() => setModo("material")} disabled={correr}>
+          Apostila / referência
+          <span>vale para a disciplina toda; torna as sínteses exatas</span>
+        </button>
+      </div>
+
       <div
         className={`dropzone${arrastar ? " on" : ""}`}
         onClick={() => inputRef.current?.click()}
@@ -134,8 +146,14 @@ export default function Uploader({ cursos, partilhada }) {
         onDragLeave={() => setArrastar(false)}
         onDrop={(e) => { e.preventDefault(); setArrastar(false); juntar(e.dataTransfer.files); }}
       >
-        <div style={{ fontWeight: 650 }}>Arrasta MP3, PDF ou txt para aqui</div>
-        <div className="hint">vários de uma vez · cada um vira síntese + flashcards · o nome U1_/U2_ arruma por unidade</div>
+        <div style={{ fontWeight: 650 }}>
+          {modo === "material" ? "Arrasta a apostila (PDF) para aqui" : "Arrasta MP3, PDF ou txt para aqui"}
+        </div>
+        <div className="hint">
+          {modo === "material"
+            ? "fica como referência da disciplina — não vira aula"
+            : "vários de uma vez · cada um vira síntese + flashcards · o nome U1_/U2_ arruma por unidade"}
+        </div>
         <input
           ref={inputRef}
           type="file"
