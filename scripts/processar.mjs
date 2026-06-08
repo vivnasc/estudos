@@ -25,6 +25,13 @@ const CLAUDE_MODEL = "claude-opus-4-8";
 const GROQ_MODEL = "whisper-large-v3";
 const PROMPT_MESTRE = fs.readFileSync("prompts/prompt-mestre.md", "utf-8");
 
+// Contexto do ecossistema de produto (opcional). Se existir, é injetado na
+// chamada ao Claude para o Bloco C mapear as aulas para os produtos reais.
+const ECOSSISTEMA_PATH = "contexto/ecossistema-produto.md";
+const ECOSSISTEMA = fs.existsSync(ECOSSISTEMA_PATH)
+  ? fs.readFileSync(ECOSSISTEMA_PATH, "utf-8")
+  : "";
+
 const AUDIO_EXT = [".mp3", ".m4a", ".wav", ".mp4", ".aac", ".ogg", ".flac", ".webm"];
 
 // Onde procurar áreas com _audio. Tudo o que estiver em cursos/* mais a
@@ -205,6 +212,22 @@ async function processarComClaude(transcricao, materialBlocos) {
         "batem certo com o material — não inventes nada que não esteja na aula ou aqui.",
     });
     content.push(...materialBlocos);
+  }
+  if (ECOSSISTEMA) {
+    content.push({
+      type: "text",
+      text:
+        "CONTEXTO DO ECOSSISTEMA DE PRODUTO DA VIVIANNE (a seguir). No BLOCO C, " +
+        "em vez de aplicares os quatro temas em abstrato, mapeia para estes " +
+        "produtos REAIS: diz que produto específico cada ideia alimenta e respeita " +
+        "a VOZ e o GLOSSÁRIO desse produto. Cada produto tem o seu glossário — não " +
+        "os mistures. Regras de voz: português de Portugal, sem travessões longos " +
+        "(— –), nomes de marca como aparecem (ex.: \"infonte\" em minúsculas), e " +
+        "evita o jargão proibido listado em cada glossário. Se uma aula não tocar " +
+        "nenhum produto real de um tema, mantém a aplicação genérica desse tema.\n\n" +
+        ECOSSISTEMA,
+      cache_control: { type: "ephemeral" },
+    });
   }
   content.push({ type: "text", text: `${PROMPT_MESTRE}\n\n=== TRANSCRIÇÃO DA AULA ===\n${transcricao}` });
 

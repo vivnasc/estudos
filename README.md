@@ -88,5 +88,8 @@ reconstrói e atualiza a app automaticamente.
   para 16 kHz mono e divididos em troços com `ffmpeg` para caberem no limite.
 - Síntese: **API do Claude** com os PDFs de `_material/` anexados como contexto
   (com *prompt caching*, para aulas seguintes do mesmo curso saírem mais baratas).
+- Produto (Bloco C): se existir `contexto/ecossistema-produto.md`, é injetado na
+  chamada ao Claude para as ideias de produto serem mapeadas aos produtos reais
+  (Infonte, FreeMe, SyncHim, a loja/Universo) e respeitarem a voz de cada um.
 - O pipeline é **idempotente**: só processa aulas que ainda não têm resultados.
 - A PWA é um *site estático* (Next.js `output: export`) — rápido e barato.
