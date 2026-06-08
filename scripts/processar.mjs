@@ -34,11 +34,6 @@ const ECOSSISTEMA = fs.existsSync(ECOSSISTEMA_PATH)
 
 const AUDIO_EXT = [".mp3", ".m4a", ".wav", ".mp4", ".aac", ".ogg", ".flac", ".webm"];
 
-// Onde procurar áreas com _audio. Tudo o que estiver em cursos/* mais a
-// disciplina partilhada (que nunca é duplicada).
-const RAIZES_AREAS = ["cursos", "."];
-const PASTAS_IGNORAR = new Set([".git", ".github", "node_modules", "web", "scripts", "prompts"]);
-
 // Groq aceita ficheiros até ~25 MB. Mantemo-nos com folga abaixo disso.
 const LIMITE_BYTES = 24 * 1024 * 1024;
 const SEGUNDOS_POR_TROCO = 1200; // 20 min por troço quando é preciso dividir
@@ -59,30 +54,40 @@ function temFfmpeg() {
 }
 const FFMPEG = temFfmpeg();
 
-function descobrirAreas() {
-  const areas = [];
-  for (const raiz of RAIZES_AREAS) {
-    if (!fs.existsSync(raiz)) continue;
-    if (raiz === ".") {
-      // disciplina-partilhada e outras áreas soltas na raiz
-      for (const nome of fs.readdirSync(raiz)) {
-        if (PASTAS_IGNORAR.has(nome) || nome.startsWith(".")) continue;
-        const dir = path.join(raiz, nome);
-        if (fs.existsSync(path.join(dir, "_audio")) && fs.statSync(dir).isDirectory()) {
-          areas.push(dir);
-        }
-      }
-    } else {
-      for (const nome of fs.readdirSync(raiz)) {
-        const dir = path.join(raiz, nome);
-        if (fs.statSync(dir).isDirectory() && fs.existsSync(path.join(dir, "_audio"))) {
-          areas.push(dir);
-        }
-      }
+function listarDirs(dir) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .map((n) => path.join(dir, n))
+    .filter((p) => fs.statSync(p).isDirectory());
+}
+
+// Uma "cadeira" é qualquer pasta com um subdiretório _audio:
+//   cursos/<curso>/<cadeira>   ou   disciplina-partilhada
+function descobrirCadeiras() {
+  const out = [];
+  for (const cursoDir of listarDirs("cursos")) {
+    for (const cadDir of listarDirs(cursoDir)) {
+      const base = path.basename(cadDir);
+      if (base.startsWith(".") || base === "_material") continue;
+      if (fs.existsSync(path.join(cadDir, "_audio"))) out.push(cadDir);
     }
   }
-  // Normaliza (remove "./") e tira duplicados
-  return [...new Set(areas.map((a) => a.replace(/^\.\//, "")))];
+  if (fs.existsSync(path.join("disciplina-partilhada", "_audio"))) out.push("disciplina-partilhada");
+  return out;
+}
+
+// Material de referência de uma cadeira = o programa do curso (se aplicável)
+// + o material próprio da cadeira. Devolve blocos com um único cache_control.
+function materialParaArea(areaDir) {
+  const partes = areaDir.split(path.sep);
+  const blocos = [];
+  if (partes[0] === "cursos" && partes.length >= 3) {
+    blocos.push(...carregarMaterial(path.join(partes[0], partes[1], "_material")));
+  }
+  blocos.push(...carregarMaterial(path.join(areaDir, "_material")));
+  blocos.forEach((b) => delete b.cache_control);
+  if (blocos.length) blocos[blocos.length - 1].cache_control = { type: "ephemeral" };
+  return blocos;
 }
 
 // ---------------------------------------------------------------------------
@@ -275,7 +280,7 @@ async function processarIngest() {
   const area = process.env.INGEST_AREA || "";
   const filename = process.env.INGEST_FILENAME || path.basename(audioPath || "");
 
-  if (!/^(cursos\/[\w.-]+|disciplina-partilhada)$/.test(area)) {
+  if (!/^(cursos\/[\w.-]+\/[\w.-]+|disciplina-partilhada)$/.test(area)) {
     throw new Error(`Área inválida: "${area}"`);
   }
   if (!audioPath || !fs.existsSync(audioPath)) {
@@ -297,7 +302,7 @@ async function processarIngest() {
     return;
   }
 
-  const material = carregarMaterial(path.join(area, "_material"));
+  const material = materialParaArea(area);
 
   console.log(`[${area}] A transcrever ${filename}...`);
   const transcricao = fs.existsSync(txtPath)
@@ -328,9 +333,9 @@ async function main() {
     return;
   }
 
-  const areas = descobrirAreas();
+  const areas = descobrirCadeiras();
   if (!areas.length) {
-    console.log("Nenhuma área com _audio encontrada.");
+    console.log("Nenhuma cadeira com _audio encontrada.");
     return;
   }
 
@@ -349,7 +354,7 @@ async function main() {
       .sort();
     if (!audios.length) continue;
 
-    const material = carregarMaterial(path.join(area, "_material"));
+    const material = materialParaArea(area);
 
     for (const audio of audios) {
       const nomeBase = path.basename(audio, path.extname(audio));

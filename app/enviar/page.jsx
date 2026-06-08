@@ -5,12 +5,13 @@ import { getCursos, getPartilhada } from "../../lib/conteudo";
 export const metadata = { title: "Enviar aula — SyntIA" };
 
 export default function EnviarPage() {
-  const cursos = getCursos();
-  const partilhada = getPartilhada();
-  const areas = [
-    ...cursos.map((c) => ({ id: c.id, titulo: c.titulo })),
-    ...(partilhada ? [{ id: partilhada.id, titulo: partilhada.titulo }] : []),
-  ];
+  const cursos = getCursos().map((c) => ({
+    id: c.id,
+    titulo: c.titulo,
+    cadeiras: c.cadeiras.map((k) => ({ id: k.id, titulo: k.titulo })),
+  }));
+  const part = getPartilhada();
+  const partilhada = part ? { id: part.id, titulo: part.titulo } : null;
 
   return (
     <>
@@ -19,12 +20,12 @@ export default function EnviarPage() {
       </div>
       <h1>Enviar aula</h1>
       <p className="lead">
-        Arrasta o MP3 da aula, escolhe a área e envia. O resto é automático:
-        transcrição, síntese, flashcards e ideias de produto aparecem na app daqui
-        a alguns minutos. Não precisas de abrir o GitHub.
+        Escolhe o curso e a cadeira, arrasta o MP3 e envia. O resto é automático:
+        transcrição, síntese, flashcards e ideias de produto aparecem na cadeira certa
+        daqui a alguns minutos. Se for uma cadeira nova, é criada na hora.
       </p>
 
-      <Uploader areas={areas} />
+      <Uploader cursos={cursos} partilhada={partilhada} />
 
       <div className="footer">O áudio fica guardado em segurança; ao repositório vão só os textos gerados.</div>
     </>

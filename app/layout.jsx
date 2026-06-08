@@ -2,7 +2,6 @@ import "./globals.css";
 import SWRegister from "./SWRegister";
 import Sidebar from "./Sidebar";
 import { getCursos, getPartilhada } from "../lib/conteudo";
-
 export const metadata = {
   title: "SyntIA — Estudo das pós-graduações",
   description: "Sínteses, flashcards e banco de produto das aulas, gerados automaticamente.",
@@ -25,19 +24,20 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
-  const cursos = getCursos();
-  const partilhada = getPartilhada();
-  const areas = [
-    ...cursos.map((c) => ({ id: c.id, titulo: c.titulo })),
-    ...(partilhada ? [{ id: partilhada.id, titulo: partilhada.titulo }] : []),
-  ];
+  const cursos = getCursos().map((c) => ({
+    id: c.id,
+    titulo: c.titulo,
+    cadeiras: c.cadeiras.map((k) => ({ id: k.id, titulo: k.titulo })),
+  }));
+  const part = getPartilhada();
+  const partilhada = part ? { id: part.id, titulo: part.titulo } : null;
 
   return (
     <html lang="pt">
       <body>
         <SWRegister />
         <div className="app">
-          <Sidebar areas={areas} />
+          <Sidebar cursos={cursos} partilhada={partilhada} />
           <main className="main">
             <div className="main-inner">{children}</div>
           </main>

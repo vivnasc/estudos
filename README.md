@@ -8,19 +8,24 @@ visível numa app instalável (PWA). Não precisas de correr nada localmente.
 
 ## Estrutura
 
+Hierarquia: **Curso → Cadeira → Aulas**.
+
 ```
 cursos/
-  01-constelacao-sistemica/
-  02-psicologia-transpessoal/
-  03-psicologia-espiritualidade/
-    _audio/         ← largas aqui os MP3 das aulas
-    _material/      ← PDFs de referência do curso (programa SEC-CES, etc.)
-    transcricoes/   ← gerado: <aula>.txt
-    sinteses/       ← gerado: <aula>.md  (Bloco A + B + flashcards)
-    produto/        ← gerado: <aula>.md  (Bloco C, por tema)
+  01-constelacao-sistemica/            ← CURSO (pós-graduação)
+    _material/                         ← programa do curso (SEC-CES)
+    01-pensamento-sistemico/           ← CADEIRA (abre quando abre)
+      _audio/         ← os MP3 das aulas desta cadeira
+      _material/      ← PDFs de referência da cadeira
+      transcricoes/   ← gerado: <aula>.txt
+      sinteses/       ← gerado: <aula>.md  (Bloco A + B + flashcards)
+      produto/        ← gerado: <aula>.md  (Bloco C, por tema)
+  02-psicologia-transpessoal/ ...
+  03-psicologia-espiritualidade/ ...
 
-disciplina-partilhada/   ← comum às 3 pós, NUNCA duplicada (mesma estrutura)
+disciplina-partilhada/   ← cadeira comum às 3 pós, NUNCA duplicada
   _material/             ← as 4 Unidades + a Apresentação
+  _audio/ transcricoes/ sinteses/ produto/
 
 prompts/prompt-mestre.md   ← o prompt que orienta o Claude
 contexto/ecossistema-produto.md  ← os teus produtos (alimenta o Bloco C)
@@ -30,9 +35,9 @@ scripts/gerar-*.mjs        ← geração do conteúdo/ícones da PWA (no build)
 app/ · lib/ · public/      ← a PWA (Next.js), na RAIZ do repositório
 ```
 
-**Adicionar um curso novo** = criar uma pasta `cursos/04-...` com `_audio/` e
-(opcional) `_material/`. Não se mexe em código — o pipeline e a app descobrem-na
-sozinhos.
+**Adicionar uma cadeira/curso** = criar uma pasta (curso novo em `cursos/04-...`,
+cadeira nova em `cursos/<curso>/<NN-nome>/`). Não se mexe em código. Pela app,
+**Enviar aula** até cria a cadeira nova sozinha quando escolhes "+ Nova cadeira".
 
 ---
 
