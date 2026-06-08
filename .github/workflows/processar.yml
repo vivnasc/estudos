@@ -2,6 +2,8 @@ name: Processar Aulas
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'cursos/**/_audio/**'
       - 'disciplina-partilhada/_audio/**'
