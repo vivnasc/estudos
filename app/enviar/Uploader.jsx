@@ -1,12 +1,18 @@
 "use client";
 import { useRef, useState } from "react";
-import { upload } from "@vercel/blob/client";
+import { createClient } from "@supabase/supabase-js";
 
+const BUCKET = "aulas";
 const EXT_AUDIO = /\.(mp3|m4a|wav|mp4|aac|ogg|flac|webm)$/i;
 const unidadeDe = (nome) => {
   const m = nome.match(/^U(\d+)/i);
   return m ? `U${m[1]}` : null;
 };
+
+// Cliente Supabase (criado uma vez, se as variáveis existirem).
+const SUPA_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPA_ANON = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supa = SUPA_URL && SUPA_ANON ? createClient(SUPA_URL, SUPA_ANON) : null;
 
 export default function Uploader({ cursos, partilhada }) {
   const destinos = [
@@ -58,20 +64,33 @@ export default function Uploader({ cursos, partilhada }) {
       setItens((prev) => prev.map((it, j) => (j === i ? { ...it, status: "enviar", erro: "" } : it)));
       try {
         const file = itens[i].file;
-        let blob;
+        if (!supa) throw new Error("Supabase não configurado no site (faltam as variáveis NEXT_PUBLIC_SUPABASE_*).");
+
+        // 1) pede ao servidor um link de upload autorizado
+        let prep;
         try {
-          blob = await upload(file.name, file, {
-            access: "public",
-            handleUploadUrl: "/api/blob-upload",
-            contentType: file.type || "audio/mpeg",
+          const r = await fetch("/api/upload-url", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ filename: file.name }),
           });
+          prep = await r.json().catch(() => ({}));
+          if (!r.ok) throw new Error(prep.error || `preparar upload (${r.status})`);
         } catch (e) {
-          throw new Error(`upload p/ Blob: ${e?.message || e}`);
+          throw new Error(`preparar: ${e?.message || e}`);
         }
+
+        // 2) envia o ficheiro direto para o Supabase
+        const up = await supa.storage.from(BUCKET).uploadToSignedUrl(prep.path, prep.token, file, {
+          contentType: file.type || "audio/mpeg",
+        });
+        if (up.error) throw new Error(`upload: ${up.error.message}`);
+
+        // 3) dispara a transcrição
         const resp = await fetch("/api/ingest", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ url: blob.url, curso: destinoId, cadeira: isPart ? "" : cadeiraSel, filename: file.name }),
+          body: JSON.stringify({ url: prep.publicUrl, curso: destinoId, cadeira: isPart ? "" : cadeiraSel, filename: file.name }),
         });
         const data = await resp.json().catch(() => ({}));
         if (!resp.ok) throw new Error(data.error || `processar (${resp.status})`);
