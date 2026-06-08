@@ -359,6 +359,18 @@ select.campo { appearance: none; cursor: pointer; }
 .fila-item.erro .fi-estado { color: var(--corpo); font-weight: 600; }
 .fi-x { background: none; border: 0; color: var(--ink-dim); cursor: pointer; font-size: 12px; text-decoration: underline; }
 
+/* ---------- Seletor Aulas / Apostila ---------- */
+.modo-tabs { display: flex; gap: 8px; }
+.modo-tab {
+  flex: 1; display: flex; flex-direction: column; gap: 3px; text-align: left;
+  padding: 11px 13px; border-radius: 10px; cursor: pointer; font: inherit; font-weight: 650;
+  background: var(--card); border: 1px solid var(--line); color: var(--ink-soft);
+}
+.modo-tab span { font-weight: 400; font-size: 11.5px; color: var(--ink-dim); line-height: 1.3; }
+.modo-tab.on { border-color: var(--gold); color: var(--corpo); background: color-mix(in srgb, var(--gold) 8%, var(--card)); }
+.modo-tab.on span { color: var(--ink-soft); }
+.modo-tab:disabled { opacity: .6; cursor: default; }
+
 .prog { display: flex; flex-direction: column; gap: 10px; }
 .prog-row {
   display: block; background: var(--card); border: 1px solid var(--line);

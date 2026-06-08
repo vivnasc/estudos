@@ -21,6 +21,10 @@ on:
         description: 'Nome do ficheiro (ex.: U1_Aula01.mp3)'
         required: false
         default: ''
+      modo:
+        description: 'aula (gera síntese) ou material (apostila de referência)'
+        required: false
+        default: 'aula'
 
 # Evita corridas simultâneas a fazerem commit ao mesmo tempo.
 concurrency:
@@ -58,6 +62,7 @@ jobs:
           INGEST_AUDIO_PATH: ${{ github.event.inputs.audio_url != '' && '/tmp/ingest-audio' || '' }}
           INGEST_AREA: ${{ github.event.inputs.curso }}
           INGEST_FILENAME: ${{ github.event.inputs.filename }}
+          INGEST_MODO: ${{ github.event.inputs.modo }}
         run: node scripts/processar.mjs
 
       - name: Commit dos resultados (só os textos, nunca o áudio)
