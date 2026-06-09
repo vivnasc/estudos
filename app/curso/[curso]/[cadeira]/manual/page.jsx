@@ -11,9 +11,11 @@ export function generateStaticParams() {
   return out.length ? out : [{ curso: "_", cadeira: "_" }];
 }
 
-// Manual imprimível de uma cadeira: junta numa só peça a ementa e, por unidade,
-// os objetivos + resumo + a síntese e os flashcards de cada aula. Pensado para
-// "Guardar como PDF" no navegador — daí o layout limpo e os estilos @media print.
+// Manual imprimível de uma cadeira: um documento de estudo legível, não um
+// despejo. Por unidade mostra os objetivos + o resumo condensado + a lista das
+// aulas que a compõem. As sínteses completas e os flashcards NÃO entram aqui —
+// vivem nas vistas de estudo por aula, para o manual não virar uma parede de
+// texto impossível de ler. Pensado para "Guardar como PDF" no navegador.
 export default function ManualPage({ params }) {
   const found = getCadeira(params.curso, params.cadeira);
   if (!found) return <div className="empty">Disciplina não encontrada.</div>;
@@ -66,31 +68,24 @@ export default function ManualPage({ params }) {
             </div>
           )}
 
-          {u.aulas.map((aula) => (
-            <article key={aula.nome} className="manual-aula">
-              <h3 className="manual-aula-titulo">{aula.titulo}</h3>
-
-              {aula.sintese && (
-                <div className="manual-bloco">
-                  <Markdown>{aula.sintese}</Markdown>
-                </div>
-              )}
-
-              {aula.flashcards?.length > 0 && (
-                <div className="manual-bloco manual-cards">
-                  <h4>Flashcards · {aula.flashcards.length}</h4>
-                  <ol>
-                    {aula.flashcards.map((c, i) => (
-                      <li key={i}>
-                        <span className="manual-card-p">{c.p}</span>
-                        <span className="manual-card-r">{c.r}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-              )}
-            </article>
-          ))}
+          {u.aulas.length > 0 && (
+            <div className="manual-bloco manual-aulas-lista">
+              <h3>📚 Aulas desta unidade</h3>
+              <p className="manual-aulas-nota no-print">
+                A síntese completa e os flashcards de cada aula ficam na vista de estudo da disciplina.
+              </p>
+              <ol>
+                {u.aulas.map((aula) => (
+                  <li key={aula.nome}>
+                    {aula.titulo}
+                    {aula.flashcards?.length > 0 && (
+                      <span className="manual-aula-meta"> · {aula.flashcards.length} flashcards</span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
         </section>
       ))}
 
