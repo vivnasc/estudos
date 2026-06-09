@@ -1,145 +1,134 @@
 [
   {
-    "p": "Segundo a perspetiva sistémica, como deve ser encarada uma organização?",
+    "p": "Qual é a definição de organização na perspetiva da abordagem sistémica?",
     "opcoes": [
-      "Como uma máquina onde se troca uma peça sem afetar as outras",
-      "Como um sistema vivo de partes interdependentes que se interligam",
-      "Como um conjunto de setores totalmente autónomos",
-      "Como uma estrutura puramente hierárquica e isolada"
+      "Um conjunto de pessoas que trabalham isoladamente em departamentos diferentes",
+      "Um todo organizado e unido, composto por duas ou mais partes interdependentes, delimitado por fronteiras identificáveis do seu macro sistema ambiental",
+      "Uma máquina onde cada peça funciona de forma independente das outras",
+      "Uma estrutura hierárquica onde apenas a liderança toma decisões"
     ],
     "correta": 1,
-    "explica": "A abordagem sistémica vê a organização como um todo integrado de partes interdependentes, e não como um mecanismo isolado."
+    "explica": "A definição sistémica enfatiza a interdependência das partes e a integração de todos os componentes da organização, não o isolamento ou o mecanicismo."
   },
   {
-    "p": "Qual é o princípio que serve de base à visão sistémica nas organizações?",
+    "p": "Qual é o princípio base do pensamento sistémico nas organizações?",
     "opcoes": [
-      "O reducionismo",
-      "O mecanicismo",
-      "O expansionismo",
-      "O individualismo"
+      "Cada departamento funciona de forma completamente isolada",
+      "O expansionismo: cada objeto ou fenómeno faz parte de um todo maior",
+      "As decisões devem ser tomadas apenas pela cúpula",
+      "A organização é um sistema mecânico onde as peças não se afetam"
+    ],
+    "correta": 1,
+    "explica": "O expansionismo é o princípio central que sustenta que cada elemento faz parte de um todo maior, e o foco está no sistema integrado, não nas partes isoladas."
+  },
+  {
+    "p": "Que vantagens tem o pensamento sistémico nas organizações?",
+    "opcoes": [
+      "Gera resultados imediatos e resolve todos os problemas",
+      "Deixar de lado o individualismo, ter diversas soluções para um problema, atingir vários objetivos ao mesmo tempo, analisar antes de escolher, tomadas de decisão conscientes",
+      "Elimina completamente a necessidade de planeamento",
+      "Funciona melhor em empresas de pequena dimensão"
+    ],
+    "correta": 1,
+    "explica": "Estas são as cinco vantagens principais descritas na aula: abandono do individualismo, multiplicidade de soluções, objetivos coletivos, análise prévia e decisões conscientes."
+  },
+  {
+    "p": "Qual é a principal desvantagem do pensamento sistémico nas organizações?",
+    "opcoes": [
+      "Não há desvantagens em adoptar o pensamento sistémico",
+      "É muito fácil implementar e mostra resultados instantaneamente",
+      "Compreender que não será algo imediato; o resultado não vem de um dia para o outro",
+      "Aumenta significativamente os custos operacionais"
     ],
     "correta": 2,
-    "explica": "O expansionismo defende que cada objeto ou fenómeno faz parte de um todo maior, sendo o foco o sistema onde tudo se integra."
+    "explica": "A aula aponta explicitamente que uma desvantagem é compreender que a transformação leva tempo e não se resolve de imediato."
   },
   {
-    "p": "Segundo a aula, em que década a visão sistémica entrou formalmente para o pensamento administrativo?",
+    "p": "Quais são as quatro bases do pensamento sistémico nas organizações, segundo a aula?",
     "opcoes": [
-      "Nos anos 40",
-      "Nos anos 60",
-      "Nos anos 80",
-      "No início do século XX"
+      "Hierarquia, centralização, foco nas tarefas e controlo rígido",
+      "Domínio pessoal, mapas mentais, visão distribuída e aprendizagem em grupo",
+      "Tecnologia, recursos financeiros, infraestrutura e processos",
+      "Liderança autocrática, departamentalização, burocracia e normas inflexíveis"
     ],
     "correta": 1,
-    "explica": "A visão sistémica passou a ser uma corrente do pensamento administrativo nos anos 60, com a popularização da teoria sistémica nas organizações."
+    "explica": "A aula identifica explicitamente estas quatro bases como a configuração mais adequada para trabalhar o pensamento sistémico nas organizações."
   },
   {
-    "p": "Segundo o Dicionário Aurélio (2008), o que é um método?",
+    "p": "O que distingue um sistema fechado de um sistema aberto, no contexto organizacional?",
     "opcoes": [
-      "Associação ou instituição com objetivos definidos",
-      "Disposição das partes de um todo coordenadas entre si",
-      "Procedimento, técnica ou meio para se atingir um objetivo",
-      "Conjunto harmónico de responsabilidades e autoridades"
-    ],
-    "correta": 2,
-    "explica": "Método é definido como o procedimento, técnica ou meio para se atingir um objetivo; organização e sistema têm as outras definições."
-  },
-  {
-    "p": "Quais são as ferramentas usadas pelo OSM no processo de melhoria das empresas?",
-    "opcoes": [
-      "Organogramas, formulários e fluxogramas",
-      "Termostatos, sensores e indicadores",
-      "Genogramas, mapas e árvores genealógicas",
-      "Inputs, outputs e feedbacks"
-    ],
-    "correta": 0,
-    "explica": "O OSM usa organogramas, formulários e fluxogramas como ferramentas para mapear e melhorar os processos."
-  },
-  {
-    "p": "Quais são os três objetivos principais do OSM (a famosa consultoria)?",
-    "opcoes": [
-      "Eliminar pessoas, reduzir salários e cortar setores",
-      "Eliminar o supérfluo, otimizar recursos e maximizar resultados",
-      "Aumentar a hierarquia, centralizar e controlar",
-      "Dividir tarefas, isolar áreas e padronizar tudo"
+      "O sistema fechado é mais eficiente que o aberto",
+      "O sistema fechado não tem intercâmbio com o meio; o sistema aberto troca energia, matéria e informação num processo contínuo",
+      "Não há diferença entre os dois tipos de sistemas",
+      "O sistema aberto é isolado do ambiente externo"
     ],
     "correta": 1,
-    "explica": "Os objetivos do OSM são eliminar o supérfluo, otimizar os recursos das empresas e maximizar os resultados."
+    "explica": "A distinção fundamental é a capacidade de troca com o ambiente: sistemas fechados são isolados, enquanto sistemas abertos mantêm intercâmbio contínuo."
   },
   {
-    "p": "O que distingue um sistema aberto de um sistema fechado, no contexto organizacional?",
+    "p": "Segundo a aula, qual é a especialidade da administração designada por OSM e qual o seu objetivo principal?",
     "opcoes": [
-      "O sistema aberto não troca nada com o meio; o fechado troca tudo",
-      "O sistema aberto troca energia, matéria e informação com o meio; o fechado não",
-      "Ambos trocam informação, mas só o fechado aprende",
-      "Não há diferença prática entre os dois"
+      "Organização Sustentável de Materiais; maximizar o desperdício",
+      "Organização, Sistemas e Métodos; estabelecer infraestrutura compatível, definir processos e métodos de trabalho e eficácia gerencial",
+      "Otimização Sistémica Moderna; apenas melhorar a tecnologia",
+      "Operações de Segurança Máxima; focar exclusivamente em risco"
     ],
     "correta": 1,
-    "explica": "O sistema aberto caracteriza-se pela troca de energia, matéria e informação com o meio, enquanto o fechado não tem intercâmbio com o ambiente."
+    "explica": "OSM é a especialidade que integra estes três pilares (Organização, Sistemas, Métodos) com o objetivo de estabelecer infraestrutura e processos eficazes, conforme Cury (1983)."
   },
   {
-    "p": "Quais são os três níveis hierárquicos das funções administrativas/operacionais?",
+    "p": "Qual das seguintes escolas da administração enfatizava principalmente as tarefas e a eficiência operacional?",
     "opcoes": [
-      "Inicial, intermédio e final",
-      "Operacional, tático e estratégico",
-      "Pessoal, grupal e coletivo",
-      "Físico, abstrato e sistémico"
-    ],
-    "correta": 1,
-    "explica": "As funções administrativas organizam-se em três níveis hierárquicos: operacional, tático e estratégico, que devem estar em sintonia."
-  },
-  {
-    "p": "Indique a sequência correta da ênfase das escolas da administração na sua evolução.",
-    "opcoes": [
-      "Pessoas → tarefas → estrutura → ambiente → todo",
-      "Tarefas → estrutura → pessoas → ambiente → todo",
-      "Ambiente → todo → tarefas → estrutura → pessoas",
-      "Estrutura → ambiente → todo → tarefas → pessoas"
-    ],
-    "correta": 1,
-    "explica": "A evolução vai da ênfase nas tarefas e estrutura para as pessoas, depois o ambiente e, por fim, o todo (Teoria dos Sistemas)."
-  },
-  {
-    "p": "Qual escola da administração deu ênfase às tarefas e à eficiência ao nível operacional?",
-    "opcoes": [
-      "Teoria Clássica de Fayol",
-      "Relações Humanas de Elton Mayo",
+      "Teoria das Relações Humanas",
+      "Teoria Burocrática",
       "Administração Científica de Taylor",
       "Teoria da Contingência"
     ],
     "correta": 2,
-    "explica": "A Administração Científica de Taylor enfatizou as tarefas e o aumento da eficiência no nível operacional."
+    "explica": "Taylor focava nas tarefas precisas, no controlo de tempo e na eficiência operacional, distinguindo-se de outras escolas que enfatizavam estrutura, pessoas ou ambiente."
   },
   {
-    "p": "Qual é a ideia central da Teoria da Contingência?",
+    "p": "O que marcou a entrada do pensamento sistémico no domínio administrativo?",
     "opcoes": [
-      "Existe um único modelo ideal de organização para todas as empresas",
-      "Tudo depende das características do ambiente; não há modelo único",
-      "A autoridade racional deve centralizar todas as decisões",
-      "O fator psicológico é o único determinante da produtividade"
+      "A Revolução Industrial no século XVIII",
+      "A obra de Daniel Katz em 1968 sobre Psicologia Social das Organizações",
+      "A criação dos primeiro sindicatos no século XIX",
+      "A emergência das primeiras multinacionais no século XX"
     ],
     "correta": 1,
-    "explica": "A Teoria da Contingência defende que não existe um modelo único; tudo depende (it depends) das características ambientais relevantes para a organização."
+    "explica": "Segundo a aula, Daniel Katz (1968) popularizou a aplicação da teoria sistémica às organizações, marcando a entrada formal desta abordagem na administração."
   },
   {
-    "p": "Segundo a aula prática, por que razão as decisões não devem ser tomadas de forma isolada?",
+    "p": "Qual era a posição central da Teoria da Contingência face aos modelos organizacionais?",
     "opcoes": [
-      "Porque é mais demorado ouvir os outros",
-      "Porque fragmenta o pensamento e pode gerar problemas que impactam toda a empresa",
-      "Porque o chefe deve sempre decidir sozinho",
-      "Porque os colaboradores não têm informação útil"
+      "Existe um único modelo universal válido para todas as empresas",
+      "Não existe um modelo único; a eficácia depende do contexto, das demandas ambientais e da tecnologia específica",
+      "As organizações devem todas adoptar a estrutura burocrática",
+      "Os modelos devem basear-se exclusivamente nas tarefas operacionais"
     ],
     "correta": 1,
-    "explica": "Decidir isoladamente fragmenta o pensamento, fazendo só uma parte resolver, o que gera complicações futuras que impactam toda a empresa."
+    "explica": "A Teoria da Contingência recusa modelos universais e defende uma abordagem situacional, flexível e pragmática, adaptada a cada contexto organizacional específico."
   },
   {
-    "p": "Qual a palavra apontada na aula como a mais certa para definir o pensamento sistémico aplicado à organização?",
+    "p": "Qual é a consequência prática mais importante do pensamento sistémico nas decisões empresariais?",
     "opcoes": [
-      "Hierarquia",
-      "Conexão",
-      "Controlo",
-      "Linearidade"
+      "As decisões devem ser tomadas apenas pelos gestores de topo",
+      "As decisões devem ser tomadas isoladamente para ganhar agilidade",
+      "As decisões devem ser construídas ouvindo todas as partes, evitando fragmentação do pensamento",
+      "As decisões não têm impacto noutros departamentos"
+    ],
+    "correta": 2,
+    "explica": "A aula enfatiza que decidir sozinho fragmenta o pensamento e gera problemas; a postura sistémica correta é construir decisões em conjunto com os colaboradores."
+  },
+  {
+    "p": "Qual das seguintes era uma das seis sugestões práticas para implementar o pensamento sistémico numa organização?",
+    "opcoes": [
+      "Aumentar a hierarquia e centralizar todas as decisões no topo",
+      "Promover formação para moldar a forma de pensar em direção ao pensamento sistémico",
+      "Eliminar completamente as reuniões entre gestores e colaboradores",
+      "Manter cada departamento completamente isolado para evitar contaminação de ideias"
     ],
     "correta": 1,
-    "explica": "Entre as palavras-chave (interligação, interconexão, integração, correlação), a conexão é apontada como a mais certa para definir o pensamento sistémico."
+    "explica": "A formação foi apontada como indispensável pois não se pode implementar aquilo que não se conhece; todos precisam compreender o pensamento sistémico para o aplicar eficazmente."
   }
 ]
