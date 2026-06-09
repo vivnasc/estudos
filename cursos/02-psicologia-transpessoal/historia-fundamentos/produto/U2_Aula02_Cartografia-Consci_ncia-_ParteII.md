@@ -1,0 +1,38 @@
+# BLOCO C — PRODUTO
+
+[maternidade] **FreeMe** — A descrição dos cinco estágios de Rolfe valida a estrutura dos 7 bloqueios do FreeMe como percurso progressivo: não se parte do bloqueio mais visível, parte-se do mais automatizado (o que "já não se sente" — equivalente ao sono sem sonho), até chegar ao "ocupar o teu lugar" (equivalente à transcendência do eu). Isto dá base teórica para a sequência terapêutica fixa da travessia.
+**Ideia concreta:** Dentro do áudio guiado do bloqueio "O peso", acrescentar uma linha de enquadramento que use a imagem do automático — "há coisas que carregas sem saber que carregas, como respiras sem pensar que respiras" — ancorando o fenómeno orgânico automático de Rolfe no idioma do produto: "o que carregas" sem consciência ainda de que não é teu. Sem jargão; só a imagem.
+
+[maternidade] **FreeMe** — O estágio "sono com sonho" (libertação parcial da libido recalcada, os pesadelos como fases dramáticas) oferece fundamento para nomear o que acontece quando a mãe começa A Travessia: a primeira coisa que sobe não é clareza, são os medos e as angústias que estavam contidos.
+**Ideia concreta:** Post/carrossel de campanha com o copy: "Quando começas a travessia, a primeira coisa que aparece não é a paz. São os pesadelos acordada. O medo. A mágoa que estava debaixo do peso. Isso não é sinal de que correu mal. É sinal de que começou." Respeita a voz FreeMe: sem "cura", sem "transformação" — a palavra é travessia, e o processo é honesto.
+
+[maternidade] **Ebook "A culpa não é boa conselheira"** — A síntese de Rolfe ("perfeita identificação do conhecimento com o sentimento") aprofunda o argumento central do ebook: a culpa da mãe persiste porque há conhecimento ("sei que não devia sentir isto") sem que o sentimento seja reconhecido. Enquanto os dois não se identificam, a culpa não passa.
+**Ideia concreta:** Num capítulo de transição (ex.: "A diferença entre culpa e responsabilidade"), um parágrafo curto que articule: "Conheceres a origem da tua culpa não a faz desaparecer. O que a move é quando o que sabes e o que sentes finalmente se encontram. Essa é a travessia." Linguagem inteiramente dentro do glossário FreeMe/Universo: pousar, travessia, voltar a ti.
+
+[amor] **SyncHim — Tier 1 (Travessia do nó dominante)** — O princípio de Rolfe do amor como consciência desenvolvida ("agir com o outro como gostaríamos que agissem connosco") é a inversão exata do mecanismo dos nós SyncHim: os nós surgem precisamente quando a mulher age a partir do padrão antigo em vez de agir a partir de consciência. A dessincronia é, no fundo, um défice de consciência relacional.
+**Ideia concreta:** Na Sessão 3 de qualquer nó (mecânica do nó), introduzir uma frase-mãe que coloque esta inversão: "O nó não é ele. O nó é o lugar onde deixaste de te ver a ti — e por isso deixaste de o ver a ele." Mantém o registo anti-guru, segunda pessoa, sem "vibração" nem "frequência".
+
+[amor] **Coleção IV — "A mulher que..." (7 livros literários)** — A progressão dos cinco estágios de Rolfe (do automático ao cósmico) oferece uma estrutura narrativa para cada livro: cada "mulher que..." vive presa num dos estágios intermédios — automatismo, pesadelo acordada, vontade recalcada — e a travessia literária é o que a move para o estágio seguinte.
+**Ideia concreta:** No livro "A mulher que desaparece no amor", estruturar a narrativa em três movimentos: (1) o que fazia sem saber que fazia (sono sem sonho — automático); (2) o momento em que o pesadelo a acorda (sono com sonho — a frase que doi); (3) o primeiro gesto de vontade própria (sono acordado — início). O quarto e quinto estágios ficam para a travessia SyncHim. O livro é a porta, não a casa.
+
+[identidade/prosperidade] **Infonte — etapa 1 (esvaziar a mesa) e etapa 2 (contar o que já tens)** — O estágio "sono sem sonho" de Rolfe (fenómenos automáticos que existem mas não são percetíveis) é o equivalente funcional do "fazer muito para valer" que o Infonte diagnostica: a mulher dispersa age em automático, sem consciência de que o faz. O momento de esvaziar a mesa é o equivalente a parar e notar a respiração pela primeira vez.
+**Ideia concreta:** Post didáctico (manhã, semana 1 da campanha ou reutilizável pós-Julho) com o copy: "Há coisas que fazes há tanto tempo que já não sabes que as fazes. Abres mais uma aba. Aceitas mais um projecto. Dizes sim outra vez. Não por vontade. Por hábito. Esvaziar a mesa começa por notar o que está lá — antes de decidir o que fica." Linguagem infonte: sem "energia", sem "mindset", com "esvaziar a mesa" e "vinte abas abertas na cabeça".
+
+[identidade/prosperidade] **Infonte — etapa 4 (focar) e etapa 5 (materializar)** — A distinção de Rolfe entre o "sono acordado" (expressão da vontade, início da autorrealização) e a "transcendência do eu" (harmonização com o eu mais profundo, sem fixação em desejos ou medos) mapeia directamente a transição entre a etapa de clareza (focar) e a de acção sustentada (materializar) no percurso do Infonte.
+**Ideia concreta:** Na etapa 4 do percurso (bloco de texto), um parágrafo que nomeie esta transição: "Clareza não é saber exactamente o que queres. É parar de agir do ruído. É ouvir a vontade que estava lá antes do barulho. Depois disso, o passo seguinte não precisa de ser grande. Precisa de ser teu." Respeitando o glossário: "chão", "bastar-se", sem "alinhamento", sem "universo".
+
+[oportunidade] **Novo:** mini-guia prático "O que o teu corpo sabe enquanto dormes" — para a mulher que vive em modo automático e não consegue parar para se ouvir, um guia de 5 micro-práticas ligadas aos estágios do sono (respiração consciente, diário de sonhos, registo de vontade ao acordar), ancorado na cartografia de Rolfe mas sem linguagem académica. Público: a mesma persona do Infonte e do FreeMe — mulher que funciona em automático e não reconhece os sinais que o próprio corpo dá. Porquê agora: abre uma ponte entre o guia prático (€5, Coleção Corpo, já existe como categoria) e o percurso do Infonte, sem criar concorrência com nenhum produto existente.
+
+---
+
+## NOTAS
+
+**Inconsistência de nome:** O teórico central é referido ao longo da aula com múltiplas grafias — "Rolfe", "Wolff", "Rope", "Rô", "Hope", "Hopi", "Rowe". Trata-se claramente da mesma pessoa. O nome mais provável, considerando o contexto académico da psicologia transpessoal, será **Richard Maurice Bucke** (autor de *Cosmic Consciousness*, 1901) ou outro estudioso desta área. A transcrição não permite confirmar com certeza o nome correto. Recomenda-se verificação no material escrito da disciplina antes de usar o nome em avaliação.
+
+**"Woodhouse":** referido como teórico que inspirou Rolfe, mas sem dados biográficos ou referência bibliográfica suficientes na transcrição para confirmar o nome exato ou a obra citada.
+
+**Matrizes perinatais básicas:** a aula menciona que são quatro, mas não descreve nenhuma delas neste encontro (remetendo para encontros anteriores). Os conteúdos específicos de cada matriz não estão disponíveis nesta transcrição.
+
+**Truncagem:** há vários segmentos da transcrição com cortes evidentes no meio de frases (ex.: "E aí ele faz justamente essa análise do consciente ao divino", "nas rea cerebrais Esse estudo das rea cerebrais", "considerando alguns aspectos que diferenciam um sujeito de outro", "os aspectos intr os aspectos mais conflitantes") — possivelmente falhas de captação de áudio ou de transcrição automática. Nesses pontos o sentido foi reconstituído pelo contexto, mas podem existir nuances perdidas.
+
+**"Crise da crisálida" e "crise da serpente":** referidas na abertura como estudadas em momento anterior, mas não desenvolvidas nesta aula. Não foi possível incluí-las nos flashcards por falta de conteúdo na transcrição.
