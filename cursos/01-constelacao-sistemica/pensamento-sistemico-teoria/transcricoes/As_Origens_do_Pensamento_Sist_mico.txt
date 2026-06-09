@@ -1,0 +1,719 @@
+As Origens do Pensamento Sistêmico: Das Partes para o Todo
+Lauren Beltrão Gomes
+
+1
+
+Simone Dill Azeredo Bolze
+
+2
+
+Rovana Kinas Bueno
+
+3
+
+Maria Aparecida Crepaldi
+
+4
+
+Resumo
+
+O Pensamento Sistêmico foi reformulado ao longo dos anos, tendo sua base epistemológica
+modificada. O presente artigo objetiva apresentar os aspectos históricos e epistemológicos que
+constituem o Pensamento Sistêmico, entendendo-se que esta compreensão teórica é fundamental
+para a prática dos terapeutas sistêmicos nos mais diversos contextos. Reforçam-se as ideias de que
+pensar sistemicamente implica reconhecer o sujeito em seu contexto, de que os fatos não são
+previsíveis e de que o terapeuta/pesquisador faz parte do sistema no qual intervém/estuda. Assim, ao
+fazer uso do Pensamento Sistêmico, o profissional amplia seu olhar sobre a situação, questiona a
+problemática apresentada, e trabalha com as pessoas envolvidas alternativas de modos mais
+funcionais de relacionamento.
+Palavras chave: pensamento sistêmico; teoria sistêmica; epistemologia.
+
+The Origins of the Systemic Thinking: From the parts to the whole
+
+Abstract
+
+The Systemic Thinking has been reformulated over the years and its epistemological basis has
+been modified. This theoretical paper aims to present the historical and epistemological aspects of the
+Systems Thinking, as well as this theoretical understanding is important for the practice of systemic
+therapists in various contexts. The paper reinforces the idea that thinking systemically involves
+recognizing the person in a context, that the facts are not predictable and that the therapist/researcher
+is part of the system in which he/she intervenes or studies. Thus, to make use of systems thinking, the
+professional expands the vision of the situation, questions the problematic presented, and works more
+functional modes of relationship with other people involved.
+Keywords: systems thinking; systems theory; epistemology.
+
+1
+
+Psicóloga. Especialista em Saúde da Família. Mestre em Psicologia. Doutoranda em Psicologia. Universidade
+Federal de Santa Catarina (UFSC).
+2
+Psicóloga. Especialista em Terapia Individual, Relacional Sistêmica. Mestre em Psicologia. Doutoranda em
+Psicologia. Universidade Federal de Santa Catarina (UFSC).
+3
+Psicóloga. Especialista em Terapia Individual, Familiar e de Casal. Mestre em Psicologia. Doutoranda em
+Psicologia. Universidade Federal de Santa Catarina (UFSC).
+4
+Psicóloga. Mestre em Psicologia Clínica. Doutora em Saúde Mental. Docente do Departamento de Psicologia
+da Universidade Federal de Santa Catarina (UFSC).
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+Introdução
+
+O Pensamento Sistêmico, hoje disseminado nas diversas áreas do conhecimento, ganhou um
+arcabouço teórico e reconhecimento na primeira metade do século XX. Embora suas bases tenham
+sido formuladas entre as décadas de 30 e 40, o processo de mudança do paradigma mecanicista
+para o ecológico tem ocorrido de forma não linear há muitos séculos, com retrocessos e avanços nos
+vários campos da ciência.
+Quando se fala em Teoria ou Pensamento Sistêmico, geralmente se conhece apenas seus
+principais conceitos e aplicabilidades, de forma que seus fundamentos históricos e epistemológicos
+dificilmente são aprofundados nos artigos científicos. Há quem não compreenda como as
+contribuições da Teoria da Comunicação Humana ou da Cibernética estão relacionadas com a Teoria
+Sistêmica. Sendo assim, este artigo objetiva apresentar os aspectos históricos e epistemológicos do
+Pensamento Sistêmico, a fim ofertar subsídios que auxiliem a compreensão daqueles que têm
+interesse por estudar essa perspectiva, bem como revisar os aspectos teóricos de quem trabalha com
+tal Teoria.
+Para tanto será realizada, inicialmente, uma retomada histórica de acontecimentos que serviram
+como embriões para o desenvolvimento do Pensamento Sistêmico. Nesse sentido, a Teoria Geral
+dos Sistemas, a Cibernética e a Teoria da Comunicação são apresentadas como limites
+paradigmáticos para a Teoria Sistêmica. Em seguida, serão apresentados os critérios fundamentais
+do Pensamento Sistêmico e, por fim, será evidenciada sua aplicabilidade na área da Psicologia. Para
+essa retomada histórica e epistemológica, serão utilizadas algumas das obras clássicas da área que
+descrevem as origens do pensamento sistêmico, costumeiramente estudadas em cursos de formação
+de terapeutas sistêmicos, quais sejam, as publicações de Capra (2006) e Vasconcellos (2010).
+
+Precursores históricos do Pensamento Sistêmico
+5
+
+A fim de tratar dos antecessores históricos da Teoria Sistêmica , a presente sessão estará
+baseada na obra de Capra (2006), a qual remonta os momentos, ao longo da história, que
+influenciaram a formulação de movimentos que serviram como pilares de sustentação para o
+desenvolvimento do Pensamento Sistêmico. O autor inicia sua jornada na Idade Antiga resgatando as
+ideias do filósofo grego Aristóteles, o qual acreditava que a matéria continha a natureza essencial de
+todas as coisas, de forma que a essência somente poderia se tornar real através da forma. A visão de
+mundo como espiritual, orgânico, característica da filosofia aristotélica, dominou o pensamento
+ocidental durante toda a Idade Média.
+Foi apenas nos séculos XVI e XVII, devido à revolução científica proporcionada pelas
+descobertas da Física, Astronomia e Matemática, que a visão medieval cedeu lugar ao entendimento
+de que o mundo seria como uma máquina, regido por leis matemáticas exatas. Este momento,
+5
+
+Compreende-se o Pensamento Sistêmico e a Teoria Sistêmica como distintos, conforme será explicitado no
+decorrer do presente artigo. Contudo, para facilitar a compreensão, a Teoria Sistêmica será considerada como
+sinônimo de Pensamento Sistêmico, uma vez que foi a partir dela que o mesmo desenvolveu-se.
+
+4
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+chamado de Mecanicismo Cartesiano, teve como seus representantes mais notáveis Galileu Galilei,
+Copérnico, René Descartes, Francis Bacon e Isaac Newton. O método analítico, um dos símbolos
+dessa revolução, foi criado por Descartes e consistia no pressuposto de que, quebrando os
+fenômenos complexos em partes, se poderia compreender o comportamento do todo a partir das
+propriedades das partes.
+O Modelo Mecanicista teve sucesso em alguns experimentos, tais como o de William Harvey, por
+meio do qual foi possível explicar o fenômeno da circulação sanguínea. Outros fisiologistas
+buscaram, sem sucesso, aplicar o mesmo modelo para compreender funções somáticas como a
+digestão e o metabolismo, pois tais fenômenos envolviam processos químicos desconhecidos na
+época. Somente no século XVIII, Antoine Lavoisier, precursor da Química Moderna, confirma a
+importância dos processos químicos para o funcionamento dos organismos vivos por meio da
+descoberta de que a respiração é uma forma especial de oxidação. A partir de então, modelos
+mecanicistas simplistas foram sendo abandonados, embora a essência da ideia cartesiana
+perdurasse.
+Opondo-se ao mecanicismo cartesiano surge o Movimento Romântico, que se estende desde o
+final do século XVIII até o término do XIX. O retorno às ideais aristotélicas ocorreu em função das
+produções de poetas e filósofos românticos alemães como Immanuel Kant, que voltaram a se
+concentrar na natureza da forma orgânica. A figura central desse movimento foi Johann Wolfgang
+Von Goethe, um dos primeiros a usar o termo morfologia para explicar o estudo da forma biológica a
+partir de um ponto de vista dinâmico. A natureza teria uma forma móvel e seguiria um padrão de
+relações dentro de um grande todo organizado e harmonioso. A preocupação básica dos biólogos
+tornou-se o problema da forma biológica, de modo que as questões referentes às composições
+materiais tornaram-se secundárias.
+Na segunda metade do século XIX, o aperfeiçoamento do microscópio possibilita importantes
+avanços na Biologia resgatando o Pensamento Mecanicista. Com a Teoria das Células, o foco dos
+biólogos foi deslocado do organismo em direção às células. Neste contexto, Louis Pasteur lança sua
+Teoria Microbiana de acordo com a qual as bactérias seriam a única causa das doenças. Embora a
+biologia celular tivesse avançado muito na compreensão das estruturas e das funções de muitas das
+subunidades, ainda não era possível explicar as atividades coordenadoras que integram essas
+operações no funcionamento da célula como um todo.
+Tal compreensão se tornou possível apenas no século XX, no qual surge a Biologia Organísmica
+ou Organicismo como um movimento de oposição ao Mecanicismo e que se delineia como forte
+influência na construção do Pensamento Sistêmico. As ideias de Aristóteles, Goethe, Kant e Cuvier
+são aprimoradas e causam grande impacto negando pensamentos estruturais do Mecanicismo
+Cartesiano, tais como o método analítico. Segundo a concepção Organísmica, as propriedades
+essenciais de um organismo pertencem ao todo, de maneira que nenhuma das partes as possuem,
+pois tais propriedades surgem justamente das interações entre as partes. Portanto, as propriedades
+das partes podem ser entendidas apenas a partir da organização do todo. O Organicismo coloca o
+foco no entendimento das relações organizadoras sendo que a concepção de organização foi
+aperfeiçoada posteriormente com o conceito de auto-organização.
+
+5
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+A Ecologia, uma das vertentes do Pensamento Sistêmico, emerge da Escola Organísmica da
+Biologia quando biólogos começaram a estudar comunidades de organismos. O foco estava colocado
+no estudo das relações que interligam os organismos. A concepção de ecossistema moldou todo o
+pensamento ecológico a partir de então e promoveu uma abordagem sistêmica da ecologia. A
+compreensão dos sistemas vivos como redes oferece uma nova perspectiva acerca das chamadas
+hierarquias da natureza. Neste sentido, de acordo com Capra (2006), não existe hierarquia na
+natureza e sim, redes que se formam dentro de outras redes.
+Paralelamente ao nascimento da Ecologia, surge a Física Quântica, formulada Werner
+Heisenberg na década de 1920, que contraria o pensamento newtoniano predominante até então,
+segundo o qual todos os fenômenos físicos poderiam ser reduzidos às propriedades de partículas
+materiais rígidas e sólidas. Tal teoria demonstra que os objetos materiais sólidos da física clássica se
+dissolvem, no nível subatômico, em padrões de probabilidades semelhantes a ondas. Tais padrões
+não representam probabilidade de coisas e sim, probabilidades de interconexões. As partículas
+subatômicas não são coisas, são interconexões entre coisas que, por sua vez, são interconexões
+entre outras coisas. Portanto, não se pode decompor o mundo em unidades elementares que existem
+de forma independente: estas só podem ser entendidas nas interrelações. Sendo assim, é o todo que
+determina o comportamento das partes.
+Ainda na década de 1920, durante a República de Weimar na Alemanha, quando a tendência
+intelectual era negar a fragmentação e o mecanicismo, buscando a totalidade, surge a Psicologia da
+Gestalt. Psicólogos liderados por Max Wertheimer e Wolfgang Köhler reconhecem a existência de
+totalidades irredutíveis como aspecto chave da percepção afirmando que totalidades exibem
+qualidades que estão ausentes em suas partes. O filósofo Christian Von Ehrenfels afirma que o todo
+é maior do que a soma das partes, princípio este que se tornou central na Teoria Sistêmica.
+Uma década mais tarde, o biólogo austríaco Ludwig Von Bertalanffy apresenta a Teoria Geral
+dos Sistemas e, em 1940, e o matemático norte-americano Norbert Wiener inicia a elaboração da
+Cibernética. Ambas as teorias tiveram desenvolvimento paralelo no século XX e configuram os limites
+paradigmáticos para a Teoria Sistêmica, em conjunto com a influência da Teoria da Comunicação
+Humana, criada por Gregory Bateson e Paul Watzlawick. A seguir, tratar-se-á de cada uma das
+teorias supracitadas.
+
+A Teoria Geral dos Sistemas: considerações históricas e conceituais
+
+Desde a década de 1920, quando inicia sua carreira como biólogo em Viena, Ludwig Von
+Bertalanffy critica a predominância do enfoque mecanicista tanto na teoria quanto na pesquisa
+científica. Em 1925, ele publica suas ideias em alemão e, em 1930, lança alguns artigos na Inglaterra.
+Na década seguinte, o autor apresenta sua teoria do organismo considerado como sistema aberto.
+Em meio ao contexto da Segunda Guerra Mundial, as ideias de Bertalanffy não foram bem aceitas em
+um primeiro momento. O biólogo conhece então, a Teoria da Cibernética que florescia nos Estados
+Unidos e passa a ser influenciado por ela. Em 1960, Bertalanffy começa a ministrar conferências nos
+Estados Unidos e em 1967 e 1968 publica a Teoria Geral dos Sistemas por meio de uma editora
+
+6
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+canadense e, em função da maior propagação de suas ideias, que passam a estar disponíveis em
+língua inglesa, a Teoria ganha visibilidade (Vasconcellos, 2010).
+A Teoria Geral dos Sistemas também é conhecida por Teoria Sistêmica. Contudo, elas são
+diferentes, visto que a Teoria Geral dos Sistemas é mais ampla e abarca todas as áreas do
+conhecimento (Física, Química, entre outras). Já a Teoria Sistêmica está mais voltada para a área da
+Psicologia. Para fins práticos, elas serão utilizadas como sinônimos, o que não se mostra errôneo,
+mas faz-se essa ressalva para fins didáticos e de esclarecimento (Costa, 2010).
+Assinala-se que, em 1912, o pesquisador, médico, filósofo e economista russo Alexander
+Bogdanov, também desenvolveu uma teoria, que se assemelha à Teoria Geral dos Sistemas, a qual
+deu o nome de Tectologia. O principal objetivo era esclarecer e generalizar os princípios de
+organização de todas as estruturas vivas e não vivas e formular uma ciência universal da
+organização. Mesmo que tal teoria seja anterior a Teoria Geral dos Sistemas e que, em 1928, tenha
+sido publicada uma segunda edição elaborada em alemão, Bertalanffy não faz referências a
+Bogdanov em seus livros (Capra, 2006).
+Bertalanffy confere importância ao Pensamento Sistêmico como um movimento científico por
+meio de suas concepções de sistema aberto e de sua Teoria Geral dos Sistemas. De acordo com o
+autor, organismos vivos são sistemas abertos que não podem ser descritos pela termodinâmica
+clássica, que trata de sistemas fechados em estado de equilíbrio térmico ou próximo dele. Os
+sistemas abertos podem se alimentar de um contínuo fluxo de matéria e de energia extraídas e
+devolvidas ao meio ambiente. Mantêm-se, portanto, afastados do equilíbrio em um estado quase
+estacionário ou em equilíbrio dinâmico (Capra, 2006).
+O objetivo da Teoria Geral dos Sistemas se constituía em estudar os princípios universais
+aplicáveis aos sistemas em geral, sejam eles de natureza física, biológica ou sociológica. Bertalanffy
+conceitua sistema como um complexo de elementos em estado de interação. A interação ou a
+relação entre os componentes torna os elementos mutuamente interdependentes e caracteriza o
+sistema, diferenciando-o do aglomerado de partes independentes (Vasconcellos, 2010). A Teoria
+Geral dos Sistemas combina conceitos do Pensamento Sistêmico e da Biologia (Costa, 2010),
+incidindo na generalização do Modelo Organicista, ou seja, na noção de que o universo pode ser
+pensado como um grande organismo vivo (Pinheiro, Crepaldi, & Cruz, 2012). Assim, pressupõem-se
+que os fenômenos não podem ser considerados isoladamente, e sim, como parte de um todo.
+Sendo assim, o todo emerge além da existência das partes e “as relações são o que dá coesão
+ao sistema todo, conferindo-lhe um caráter de totalidade ou globalidade, uma das características
+definidoras do sistema” (Vasconcellos, 2008, p.199). Os conceitos básicos de sua teoria são:
+globalidade,
+
+não-somatividade,
+
+homeostase,
+
+morfogênese,
+
+circularidade
+
+e
+
+equifinalidade
+
+(Vasconcellos, 2010). Segue abaixo uma breve descrição de cada um desses conceitos.
+De acordo com a globalidade, todos os sistemas funcionam como um todo coeso e mudanças
+em uma das partes provocam mudanças no todo. O conceito de não-somatividade afirma que o
+sistema não é a soma das partes, devendo-se considerar o todo em sua complexidade e
+organização; assim, embora o indivíduo faça parte da família, ele mantém sua individualidade. A
+homeostase é o processo de autorregulação que mantém a estabilidade do sistema preservando seu
+
+7
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+funcionamento. A morfogênese é o processo oposto a homeostase, ou seja, é a característica dos
+sistemas abertos de absorver os aspectos externos do meio e mudar sua organização. A
+circularidade, também chamada de causalidade circular, bilateralidade ou não-unilateralidade, diz
+respeito à relação bilateral entre elementos, sendo que esta relação é não linear e obedece a uma
+sequência circular. O último conceito, equifinalidade, refere que em um sistema aberto, o resultado de
+seu funcionamento independe do ponto de partida, ou seja, o equilíbrio é determinado pelos
+parâmetros do sistema; diferentes condições iniciais geram igualdade de resultados e diferentes
+resultados podem ser gerados por diferentes condições iniciais. Desta forma, nos sistemas fechados
+o estado de equilíbrio é dado pelas condições iniciais (Barcellos & Moré, 2007; Osorio, 2002;
+Vasconcellos, 2010).
+A Teoria Geral dos Sistemas também fez uso do conceito de retroalimentação ou feedback que
+emergiu na cibernética (como será ressaltado adiante), o qual garante a circulação de informações
+entre elementos do sistema. A retroalimentação pode ser negativa, o que acontece quando esse
+mantém a homeostase, ou positiva, ocorre quando o sistema responde pela mudança sistêmica
+(morfogênese) (Vasconcellos, 2010).
+Além
+
+desses
+
+conceitos,
+
+Bertalanffy
+
+dedicou-se
+
+a
+
+investigar
+
+os
+
+princípios
+
+básicos
+
+interdisciplinares que pudessem constituir uma teoria interdisciplinar. Apontou para a necessidade de
+categorias mais amplas de pensamento científico, de forma que a Sociologia e a Biologia também
+pudessem ser abarcadas por uma ciência mais rigorosa, além da Física e da Química. O autor não
+queria se afastar do referencial da ciência tradicional e por isso manteve-se preso ao pressuposto de
+objetividade. Ele acreditava em um mundo hierarquicamente organizado, em uma realidade
+independente do observador (Capra, 2006).
+De acordo com Bertalanffy, uma Teoria Geral dos Sistemas ofereceria um arcabouço conceitual
+abrangente capaz de unificar várias disciplinas científicas que, naquele momento, estavam isoladas e
+fragmentadas. Propõe, portanto, uma ciência da totalidade, da integridade ou de entidades
+totalitárias. O autor busca uma síntese do conhecimento sem eliminar as diferenças por meio de um
+esquema claro e consistente de conceitos, uma teoria unitária em torno de conceitos de sistema e
+organização. O foco é deslocado da constituição das entidades para a organização dos sistemas e
+para o conceito de interação (Grandesso, 2000).
+A interação gera realimentações (feedbacks) que podem ser positivas ou negativas, criando
+assim uma autorregulação regenerativa, que, por sua vez, cria novas propriedades, as quais podem
+ser benéficas ou maléficas para o todo independente das partes. A interação dos elementos do
+sistema é chamada de sinergia. Por outro lado, a entropia é a desordem ou ausência de sinergia. Um
+sistema pára de funcionar adequadamente quando ocorre entropia interna. Os sistemas orgânicos em
+que as alterações benéficas são absorvidas e aproveitadas sobrevivem, e os sistemas onde as
+qualidades maléficas ao todo resultam em dificuldade de sobrevivência tendem a desaparecer caso
+não haja outra alteração de contrabalanço que neutralize aquela primeira mutação. Assim, de acordo
+com Bertalanffy, a mudança permanece ininterrupta enquanto os sistemas se autorregulam e se
+retroalimentam (Vasconcellos, 2010).
+Um sistema realimentado é necessariamente um sistema dinâmico, já que deve haver uma
+
+8
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+causalidade implícita. Em um ciclo de retroação, uma saída é capaz de alterar a entrada que a gerou,
+e consequentemente, a si própria. Se o sistema fosse instantâneo, essa alteração implicaria uma
+desigualdade. Portanto, em uma malha de realimentação deve haver certo retardo na resposta
+dinâmica. Esse retardo ocorre devido a uma tendência do sistema de manter o estado atual mesmo
+com variações bruscas na entrada, isto é, ele deve possuir uma tendência de resistência a
+mudanças. Assim, uma organização realimentada e autogerenciada gera um sistema cujo
+funcionamento é independente da substância concreta dos elementos que a formam. Dessa forma,
+elementos podem ser substituídos sem dano ao todo, o que caracteriza o processo de
+autorregulação, no qual o todo assume as tarefas da parte que falhou (Vasconcellos, 2010).
+Na década de 1940, aportes teóricos se articularam à Teoria Geral dos Sistemas, quais sejam, a
+Cibernética e a Teoria da Comunicação. Embora Osório (2002) afirme que a Teoria dos Jogos
+também influenciou a Teoria Geral dos Sistemas, optou-se aqui por tratar exclusivamente da
+Cibernética e da Teoria da Comunicação, visto apenas estas são referenciadas nas obras como
+fundantes da Teoria Geral dos Sistemas.
+
+A Cibernética
+
+A Teoria da Cibernética foi desenvolvida pelo matemático americano, e professor do
+Massachussets Institute of Technology (MIT), Norbert Wiener (1894-1964). No início da década de
+1940, Wiener participava de reuniões vinculadas à escola de Medicina de Harvard nas quais se
+discutia o método científico. Estas reuniões tinham uma proposta interdisciplinar, pois participavam
+professores e pesquisadores de diversas áreas que se interessavam pelo tema. Assim, Wiener
+conheceu Walter Cannon e Arturo Rosenblueth (fisiologistas), com os quais iniciou discussões que
+deram início ao pensamento que originou a Cibernética (Vasconcellos, 2010).
+Naquela época, o mundo vivia a Segunda Guerra Mundial e os Estados Unidos começou a
+financiar pesquisas que pudessem contribuir para a melhoria das máquinas de guerra. Com isso,
+Wiener, em parceria com Rosenblueth e com o engenheiro eletrônico Julian Bigelow, criou um projeto
+que aprimorou a artilharia antiaérea. Wierner desenvolveu programas e “máquinas computadoras”
+que tinham conexão com o sistema nervoso humano. A ideia de Wierner e dos pesquisadores com
+quem trabalhava era de projetar máquinas que tivessem performance de funções humanas. Nas
+pesquisas realizadas para a execução do projeto, Wiener e Bigelow criaram o conceito de feedback,
+também chamado de realimentação ou retroação (como já mencionado anteriormente), o qual foi
+desenvolvido para explicar de que forma pode-se corrigir desvios a máquinas computadorizadas, os
+quais eram essenciais para a guerra e se fazia analogia entre o funcionamento do sistema nervoso e
+o funcionamento das máquinas de computação (Vasconcellos, 2010).
+Em 1944, houve um encontro em Princenton para discutir “Cibernética”, do qual participaram
+engenheiros, projetistas de máquinas computadorizadas, fisiologistas, neurocientistas e matemáticos.
+a
+
+Em 1946, acontece a 1 Conferência Macy em Nova Iorque, a qual teve como tema “Feedback” e que
+contou com a presença dos pesquisadores acima citados e de psicólogos, antropólogos, economistas
+e especialistas na Teoria dos Jogos. O encontro pretendia reunir cientistas que pudessem ajudar na
+
+9
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+compreensão do sistema nervoso, comunidades sociais e meios de comunicação. Nos anos
+subsequentes, houve várias conferências Macy e pode-se afirmar que o arcabouço teórico da
+Cibernética foi construído nestes encontros. A partir dessas reuniões, a área foi reconhecida por
+inúmeras realizações tecnológicas, tais como: aparelho que permite aos cegos a leitura auditiva de
+um texto impresso, computadores ultrarrápidos, próteses para membros perdidos, máquinas artificiais
+com performances altamente elaboradas, pulmão artificial, máquina de jogar xadrez, aparelho
+auditivo para deficientes auditivos, máquinas para atuarem em situações em que o trabalho implica
+risco para o homem, dentre outras invenções (Vasconcellos, 2010).
+Desta forma, no final de década de 1940, Wierner escreveu sobre a Teoria da Cibernética,
+também chamada de “Ciência da Correção”. O termo Cibernética origina-se da palavra grega
+kybernetes que significa piloto, condutor. Desta forma, tal teoria apresenta uma tendência
+mecanicista por sua associação com máquinas ou sistemas artificiais. A preocupação do autor era
+com a construção de sistemas que reproduzissem os mecanismos de funcionamento de sistemas
+vivos, isto é, ele propôs a construção dos chamados autômatos simuladores de vida ou máquinas
+Cibernéticas (Vasconcellos, 2010).
+Para Wiener, o propósito da Cibernética era o de desenvolver uma linguagem e técnicas que
+permitissem abordar o problema da comunicação e do controle em geral. Portanto, considerava que a
+mensagem era o elemento central, tanto na comunicação quanto no controle, ou seja, quando nos
+comunicamos enviamos uma mensagem e, da mesma forma, quando comandamos. A mensagem
+pode ser transmitida por meios elétricos, mecânicos ou nervosos e é considerada uma sequência de
+eventos mensuráveis, distribuídos no tempo (Vasconcellos, 2010). Por esta razão, o antropólogo
+Gregory Bateson, que também participava das conferências Macy, desenvolve a Teoria da
+Comunicação que contribui de forma significativa para a melhoria das máquinas Cibernéticas. A
+a
+
+a
+
+a
+
+Teoria da Cibernética divide-se em Cibernética de 1 ordem e de 2 ordem. A Cibernética de 1
+a
+
+a
+
+ordem se subdivide em 1 e 2 Cibernética.
+a
+
+A 1 Cibernética trata dos processos morfoestáticos (manutenção da mesma forma), resultantes
+da retroalimentação negativa ou retroação autorreguladora, a qual conduz o sistema de volta a seu
+estado de equilíbrio homeostático, otimizando a obtenção da meta. Assim, trata da capacidade de
+auto-estabilização ou de automanutenção do sistema (Vasconcellos, 2010). Apresenta conceitos de
+input e output, enfatiza a presença do observador fora do sistema e como expert (objetividade), e a
+compreensão dos fenômenos ainda está arraigada à causalidade linear (estabilidade). Assim, nesta
+1ª Cibernética emerge o pressuposto da complexidade, que reconhece que a simplificação obscurece
+as inter-relações e, portanto, busca-se contextualizar os fenômenos e explorar os sistemas dos
+sistemas, entendendo que não há uma causalidade linear e sim, circular (Vasconcellos, 2010).
+a
+
+Já a 2 Cibernética trata dos processos morfogenéticos (gênese de novas formas), resultantes
+de retroalimentação positiva ou retroação amplificadora de desvios, amplificação que pode - caso não
+produza a destruição do sistema e se a estrutura do mesmo permitir - promover sua transformação,
+levando-o a um novo regime de funcionamento. Trata da capacidade de auto-mudança do sistema
+(Vasconcellos, 2010). Os conceitos de input e output persistem, mas aparece o conceito de feedback
+(criado por Wiener e Bigelow, como já mencionado anteriormente) e de causalidade circular retroativa
+
+10
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+e recursiva. Assim, aqui tem origem o pressuposto da instabilidade, o qual baseia-se na noção do
+mundo como em um processo de constante transformação, no qual há a indeterminação e, por isso,
+alguns fenômenos são imprevisíveis e irreversíveis, e, portanto, incontroláveis (Vasconcellos, 2010).
+A Cibernética de 2ª ordem também é chamada de Si-Cibernética porque Edgar Morin propôs um
+movimento que ultrapassasse a Cibernética: a Si-Cibernética. O prefixo si é o elemento da
+preposição grega sun que significa “estar junto”, o que marca a obrigação recíproca entre as partes.
+O físico Heinz Von Foster é considerado uma figura central para o desenvolvimento da SiCibernética. Ele é responsável pela noção de sistemas observantes, de acordo com o qual o
+observador, incluindo-se no sistema que observa, se observa observando (Vasconcellos, 2010). A
+partir da noção de sistemas observantes, a Cibernética tomou a si mesma como objeto de estudo e
+surgiu, então, a Cibernética de 2ª ordem, também chamada de construtivismo ou visão construtivista,
+pois pressupõe o observador como parte do sistema observado (Osorio, 2002; Vasconcellos, 2010).
+a
+
+Então, a Cibernética de 2 ordem, também chamada de Cibernética da Cibernética, ou
+Cibernética novo-paradigmática, apresenta os três pressupostos da ciência novo-paradigmática,
+quais sejam: complexidade, instabilidade e intersubjetividade. A noção de complexidade está ligada a
+sistemas, ecossistemas, causalidade circular, recursividade, contradições e pensamento complexo. A
+ideia de instabilidade está relacionada à desordem, evolução, imprevisibilidade, saltos qualitativos,
+auto-organização e incontrolabilidade. O pressuposto da intersubjetividade envolve a inclusão do
+observador,
+
+autorreferência,
+
+significação
+
+da
+
+experiência
+
+na
+
+conversação
+
+e
+
+coconstrução
+
+(Vasconcellos, 2010).
+A articulação dos desenvolvimentos da Cibernética que fazem emergir a Si-Cibernética mudou
+os pressupostos epistemológicos da ciência tradicional (simplicidade, instabilidade e objetividade),
+exigindo uma reorganização dos conceitos anteriormente elaborados (Barcellos & Moré, 2007). Falase então em Pensamento Sistêmico, o qual também é chamado de epistemologia sistêmica, de novo
+paradigma da ciência (ou paradigma da ciência contemporânea), ou ainda, de epistemologia da
+ciência novo-paradigmática (Vasconcellos, 2010). Todavia, nem tudo o que é sistêmico e nem tudo o
+que se apresenta como Teoria Sistêmica ou Pensamento Sistêmico, pode ser reconhecido como
+sendo da epistemologia da ciência novo-paradigmática; para que seja novo-paradigmático, é
+necessário que tenha os três pressupostos mencionados acima, quais sejam, complexidade,
+instabilidade e intersubjetividade.
+
+A Teoria da Comunicação
+
+Gregory Bateson (1904-1980), antropólogo inglês, se utilizou das teorias acima citadas para
+desenvolver a Teoria da Comunicação. O autor, junto com seus colaboradores de Palo Alto
+(Califórnia), descreveu a comunicação patogênica na família do esquizofrênico e apresentou a
+hipótese do duplo vínculo, ou seja, uma forma de comunicação paradoxal que tem profundas
+implicações nas relações interpessoais. Bateson fazia uso de analogias, metáforas e histórias por
+acreditar que esses recursos eram um caminho para o estudo das relações (Osório, 2002).
+O processo de comunicação humana abrange uma complexidade de fatores, tais como
+
+11
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+conteúdo, forma e linguagem, os quais estão sempre presentes nos processos interrelacionais. A
+Teoria da Comunicação humana, na sua origem, engloba três dimensões: a sintaxe, a semântica e a
+pragmática. A sintaxe se refere à transmissão da informação; a semântica está relacionada ao
+significado dos símbolos; e a pragmática diz respeito aos aspectos comportamentais da
+comunicação. A teoria também apresenta o conceito da metacomunicação (comunicação sobre a
+comunicação) e o uso de mensagens congruentes ou incongruentes (Watzlawick, Beavin, & Jackson,
+1973).
+Segundo Watzlawick et al. (1973), invariavelmente as pessoas enviam e recebem uma
+diversidade de mensagens, sejam elas pelos canais verbais ou não verbais, e as mesmas
+necessariamente modificam ou afetam umas às outras. Quando duas pessoas interagem
+constantemente, reforçam e estimulam o que está sendo dito ou feito, de tal forma que o padrão de
+comunicação entre os participantes de uma interação define o relacionamento entre eles. Percebe-se,
+assim, que a importância das mensagens não está vinculada somente à questão de comunicar algo,
+mas também, e especialmente, à influência que ela exerce no comportamento e nas atitudes das
+pessoas em interação (Nieweglowski & More, 2008).
+A Teoria da Pragmática da Comunicação Humana afirma que a comunicação afeta o
+comportamento ocasionando implicações nas relações interpessoais. De acordo com Watzlawick et
+al. (1973), “atividade ou inatividade, palavras ou silêncio, tudo possui valor de mensagem, influencia
+os outros, e estes outros que, por sua vez, não podem não responder a essas comunicações, estão,
+portanto, comunicando também” (p. 45).
+Além disso, Bateson e Watzlawick preconizaram que a teoria também abarca os cinco axiomas
+que são: 1) É impossível não comunicar; 2) Toda comunicação tem aspecto de relato (conteúdo) e de
+ordem (relação); 3) A natureza de uma relação está na contingência da pontuação das sequências
+comunicacionais entre os comunicantes (cada comportamento é causa e efeito do outro); 4) Os seres
+humanos se comunicam de maneira digital (comunicação verbal) e analógica (comunicação nãoverbal); e 5) Todas as permutas comunicacionais ou são simétricas ou complementares, e estão
+baseadas na igualdade ou na diferença (Watzlawick et al. 1973).
+Bateson concebeu um conceito novo e radical de mente, capaz de superar a visão cartesiana.
+Mente é um fenômeno sistêmico característico dos seres vivos, uma característica relacional. A
+mente não está no cérebro e sim nas relações. Também nega a objetividade da realidade quando
+afirma que o observador traz a marca de quem observa. Não existe, portanto, uma realidade objetiva,
+independente do observador (Vasconcellos, 2010), conforme já explicitado no pressuposto da
+intersubjetividade. A compreensão dos padrões comunicacionais que possibilitam ou dificultam as
+relações são de suma importância para aqueles que trabalham dentro do paradigma sistêmico. A
+seguir, serão destacados os principais requisitos para a formulação do Pensamento Sistêmico.
+
+Critérios fundamentais do Pensamento Sistêmico
+
+A palavra “sistema” deriva do grego synhistanai que significa colocar junto. O entendimento
+sistêmico requer uma compreensão dentro de um contexto, de forma a estabelecer a natureza das
+
+12
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+relações. A principal característica da organização dos organismos vivos é a natureza hierárquica, ou
+seja, a tendência para formar estruturas multiniveladas de sistemas dentro de sistemas. Cada um dos
+sistemas forma um todo com relação as suas partes e também é parte de um todo. A existência de
+diferentes níveis de complexidade com diferentes tipos de leis operando em cada nível forma a
+concepção de “complexidade organizada” (Vasconcellos, 2010).
+O primeiro dos critérios fundamentais do Pensamento Sistêmico se refere à mudança das partes
+para o todo, a partir do entendimento de que as propriedades essenciais são do todo de forma que
+nenhuma das partes as possui, pois estas surgem justamente das relações de organização entre as
+partes para formar o todo. Outro critério diz respeito à capacidade de deslocar a atenção de um lado
+para o outro entre níveis sistêmicos (Vasconcellos, 2010).
+O pensamento é contextual, pois a análise das propriedades das partes não explica o todo. É
+ambientalista porque considera o contexto. A ênfase está nas relações e não nos objetos, ou seja, os
+próprios objetos são redes de relações, embutidas em redes maiores. O mundo vivo é entendido
+como uma rede de relações. O conhecimento científico é tido como uma rede de concepções e de
+modelos sem fundamentos firmes e sem que um deles seja mais importante do que outros. O mundo
+material é visto como uma teia dinâmica de eventos interrelacionados (Vasconcellos, 2010).
+Por fim, o último critério se refere à mudança da ciência objetiva para a epistêmica; o método de
+questionamento torna-se parte integral das teorias científicas. A compreensão do processo de
+conhecimento precisa ser explicitamente incluída na descrição dos fenômenos naturais, de forma que
+tais descrições não são objetivas (Capra, 2006; Grandesso, 2000; Vasconcellos, 2010).
+
+A prática sistêmica no campo da Psicologia
+
+Fundamentada na Teoria Geral dos Sistemas proposta por Bertalanffy, na Cibernética de Wiener
+e na Teoria da Comunicação, formulada por Bateson e Watzlawick, surge a prática sistêmica. Capra
+destaca que “com o forte apoio subsequente vindo da Cibernética, as concepções de Pensamento
+Sistêmico e de Teoria Sistêmica tornaram-se partes integrais da linguagem científica estabelecida, e
+levaram a numerosas metodologias e aplicações novas” (1996, p. 53). Atualmente, as áreas de
+aplicação do Pensamento Sistêmico são planejamento e avaliação, educação, negócios e
+administração, saúde pública, sociologia, ciências da terra, desenvolvimento humano, ciências
+cognitivas, dentre outras (Cabrera, Colosi & Lobdell, 2008).
+No campo da Psicologia Clínica, até a década de 1940, a prática terapêutica era orientada pela
+Psicanálise e a ideia hegemônica era a de que o comportamento humano era regido por forças
+intrapsíquicas. Como consequência da Segunda Guerra Mundial, houve um movimento de união das
+famílias e tornaram-se mais fortes as críticas à Psicanálise por não dar a ênfase necessária aos
+contextos ambientais. A Teoria Sistêmica passa a ganhar força trazendo a proposta de mudança no
+foco das teorias clínicas do indivíduo para os sistemas humanos, ou seja, do intrapsíquico para o
+interrelacional. Dessa forma, nas décadas de 50 e 60, ocorre um movimento de combinação entre
+abordagens já consolidadas, tais como a psicanalítica, e novos conceitos baseados na Teoria dos
+Sistemas, na Cibernética e na Teoria da Comunicação. Desta combinação nasce uma “nova
+
+13
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+perspectiva sobre a complexidade e reciprocidade do comportamento humano e seu desenvolvimento
+dentro da rede de relações e da cultura da comunicação dentro da família” (Kreppner, 2003, p. 202).
+De acordo com a Perspectiva Sistêmica, os sistemas devem ser vistos como estruturas
+organizadas hierarquicamente que precisam ser analisadas em sua totalidade: desde os aspectos
+macro, como a ordem social, passando por níveis intermediários, como as culturas das comunidades
+locais, até atingir um nível mais proximal (ou de microanálise), como as escolas e a família (Sifuentes,
+Dessen & Oliveira, 2007). Conforme Grandesso (2000), a mudança de foco do intrapsíquico para o
+interrelacional representou uma transformação paradigmática à medida que passou a configurar outro
+sistema de pressupostos para informar a concepção dos problemas humanos e das práticas da
+Psicologia. A ênfase passa a ser dada aos contextos e formula-se a postulação de uma causalidade
+circular retroativa e recursiva para os fenômenos, o que favoreceu a abertura do campo da
+psicoterapia para a interdisciplinaridade e ampliou as fronteiras para a compreensão da pessoa
+humana para além do psicológico.
+O Pensamento Sistêmico passa a ser o substrato de propostas de intervenção para a clínica de
+família. Dessen (2010) ressalta a relevante contribuição da Teoria Sistêmica da família, a partir da
+segunda metade do século XX, visto que trouxe um novo olhar para o contexto familiar. A adoção da
+Perspectiva Sistêmica implica em entender a família como um sistema complexo, composto por
+vários subsistemas que se influenciam mutuamente, tais como o conjugal e o parental (Kreppner,
+2000). O estudo de Costa (2010) destaca brevemente os momentos cruciais da construção teóricometodológica que caracterizaram o início da Terapia de Família e marcaram seu desenvolvimento. A
+autora também apresenta as diferentes Escolas de Terapia Familiar, desde aquelas fortemente
+influenciadas pela Cibernética até aquelas que assimilaram as contribuições do Construtivismo e do
+Construcionismo Social.
+Böing, Crepaldi e Moré (2009) abordam os benefícios da adoção da epistemologia sistêmica
+pelos profissionais de saúde, pois a compreensão da complexidade do processo saúde-doença levaos a reconhecer a necessidade da atuação interdisciplinar para a construção efetiva de atenção
+integral à saúde, em conformidade com os princípios fundamentais do Sistema Único de Saúde. De
+acordo com as autoras, o Pensamento Sistêmico pode funcionar como uma base para o profissional
+refletir, flexibilizar e contextualizar suas práticas, possibilitando que as mesmas respondam de forma
+eficiente às demandas da atenção básica. Nesse sentido, pensar sistemicamente transcende a
+atuação profissional, enriquece e amplia a visão e a atuação como cidadãos, o que possibilita a
+reflexão e o diálogo em torno dos problemas sociais e comunitários de modo mais abrangente e
+contextualizado (Moré & Macedo, 2006).
+Böing et al. (2009) ressaltam que, na área da saúde, a escuta psicológica, de acordo com a
+Perspectiva Sistêmica, é considerada uma estratégia para considerar seres humanos em contextos
+de forma que as ações sempre partam do contexto e sejam dirigidas para o contexto. O profissional
+de Psicologia, nesse cenário, desempenha um papel de mediador e catalisador das potencialidades e
+dos recursos, tanto das pessoas em si como da comunidade, na satisfação das necessidades e na
+melhora da qualidade de vida. O psicólogo, juntamente aos demais profissionais da equipe de saúde,
+coordena ações que levem à ampliação da situação apresentada, criem contextos de autonomia e
+
+14
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+favoreçam a mudança (Moré & Macedo, 2006; Vasconcellos, 2008).
+O Pensamento Sistêmico pode ser utilizado em qualquer contexto, como em situações de
+mediação familiar em ambiente jurídico (Bueno, Leal, & Souza, 2012). Nesse contexto, o
+embasamento sistêmico se mostra útil para pensar as famílias e os casais cujo processo de
+separação conjugal litigioso foi o motivo do encaminhamento. Ao compreender essas famílias como
+sistemas, amplia-se o olhar sobre as mesmas, corresponsabiliza-se os membros da família pelo
+modo de relacionamento estabelecido e questiona-se a problemática apresentada, explorando o que
+está por trás do conflito. Realizar intervenções de modo a modificar os padrões de interação
+disfuncionais tem se mostrado benéfico, pois ao desenvolver formas de relacionamento mais
+funcionais, o sistema se mostra mais saudável.
+
+Considerações finais
+
+A Teoria Sistêmica recebeu influência da Cibernética e da Teoria da Comunicação Humana; em
+termos gerais, da primeira tomou os conceitos de feedback, homeostase e causalidade circular
+(retroativa e recursiva), e da segunda utilizou os axiomas da comunicação. A compreensão histórica e
+conceitual acerca do processo de construção do Pensamento Sistêmico, bem como de suas bases
+estruturantes é imprescindível, pois toda prática está ou deveria estar articulada à compreensão
+teórica do fenômeno de estudo ou intervenção. Desse modo, ao fazer uso do Pensamento Sistêmico,
+entende-se que a ciência não pode fornecer uma compreensão completa e definitiva, pois sempre se
+lida com descrições limitadas e aproximadas da realidade. Tal forma de compreender o mundo e as
+relações pode ser usada em diversos contextos e em várias áreas do saber.
+Dentro da Psicologia, o Pensamento Sistêmico pode ser utilizado tanto para o embasamento
+teórico de pesquisas quanto na intervenção clínica com indivíduos, famílias e grupos sociais. Pensar
+sistemicamente, embasando-se na ciência novo paradigmática, implica reconhecer o sujeito no seu
+contexto; o terapeuta ou pesquisador se inclui no sistema no qual intervém ou que estuda,
+entendendo que a realidade não é estática e nem presumível. Assim, pensar sistemicamente não
+significa negar os fenômenos intrapsíquicos, e sim buscar compreender e trabalhar os fenômenos
+psíquicos de uma complexa rede de relações interpessoais.
+
+Referências
+
+Barcellos, W. B. E., & Moré, C. L. O. O. (2007). Profissionais trabalhando com famílias em situação
+de violência intrafamiliar: Como a abordagem sistêmica pode ajudar? (Resumo expandido).
+Ciência, Cuidado e Saúde, 6(1).
+Böing, E., Crepaldi, M. A., & Moré, C. L. O. O. (2009). A epistemologia sistêmica como substrato à
+atuação do psicólogo na atenção básica. Psicologia: Ciência e Profissão, 29(4), 828-845.
+Bueno, R. K.; Leal, C. F. R.; Souza, S. A. de. (2012). Mediação na Defensoria Pública: Um relato de
+experiência. Revista Pensando Famílias, 16(1), 249-258.
+Cabrera, D., Colosi, L., & Lobdell, C. (2008). Systems thinking. Evaluation and Program Planning,
+
+15
+Pensando Famílias, 18(2), dez. 2014, (3-16)
+
+As Origens do Pensamento Sistêmica – L. Gomes, S. Bolze, R. Bueno, M. Crepaldi
+
+31(3), 299-310. doi: http://dx.doi.org/10.1016/j.evalprogplan.2007.12.001
+Capra, F. (2006). A teia da vida: Uma nova compreensão científica dos sistemas vivos. São Paulo:
+Cultrix.
+Costa, L. F. (2010). A perspectiva sistêmica para a clínica da família. Psicologia: Teoria e Pesquisa,
+26, 95-104.
+Dessen, M. A. (2010). Estudando a família em desenvolvimento: Desafios conceituais e teóricos.
+Psicologia: Ciência e Profissão, 30(núm. esp.), 202-219.
+Grandesso, M. A. (2000). Sobre a reconstrução do significado: Uma análise epistemológica e
+hermenêutica da prática clínica. São Paulo: Casa do Psicólogo.
+Kreppner, K. (2000). The child and the family: Interdependence in developmental pathways.
+Psicologia: Teoria e Pesquisa,16, 11-22.
+Kreppner, K. (2003). Social relations and affective development in the first two years in family
+contexts. In J. Valsiner & K. J. Connolly (Eds.), Handbook of developmental psychology (pp. 194214). Londres: Sage.
+Moré, C. L. O. O., & Macedo, R. M. S. (2006). A psicologia na comunidade: Uma proposta de
+intervenção. São Paulo: Casa do Psicólogo.
+Nieweglowski, V. H. & Moré, C. L. O. O. (2008). Comunicação equipe-família em unidade de terapia
+intensiva pediátrica: Impacto no processo de hospitalização. Estudos de Psicologia: Campinas:
+25(1), 111-122.
+Osorio, L. C. (2002). Teoria sistêmica e da comunicação humana. In L. C. Osorio & M. E. do Valle
+(Eds.), Terapia de famílias: Novas tendências. Porto Alegre: Artmed.
+Pinheiro, I. R., Crepaldi, M. A., & Cruz, R. M. (2012). Entendeu ou quer que eu desenhe? Transições
+familiares através da visão sistêmica. Fractal: Revista de Psicologia, 24(1), 175–192.
+Sifuentes, T. R., Dessen, M. A., & Oliveira, M. C. S. L. (2007). Desenvolvimento humano: Desafios
+para a compreensão das trajetórias probabilísticas. Psicologia: Teoria e Pesquisa, 23(4), 379-386.
+Vasconcellos, M. J. E. de. (2010). Pensamento sistêmico: O novo paradigma da ciência (9ª ed.).
+Campinas: Papirus.
+Watzlawick, P., Beavin, J. H., & Jackson, D. (1973). Pragmática da comunicação humana: Um estudo
+dos padrões, patologias e paradoxos da interação (9ª ed.). São Paulo: Cultrix.
+
+Endereço para correspondência
+
+E-mail Lauren Beltrão Gomes: laurenbeltrao@yahoo.com.br
+E-mail Simone Dill Azeredo Bolze: simoneazeredo@yahoo.com.br
+E-mail Rovana Kinas Bueno: rovanak@gmail.com
+E-mail Maria Aparecida Crepaldi: maria.crepaldi@gmail.com
+
+Enviado em 19/09/2014
+Aceito em 20/11/2014
+
+16
+Pensando Famílias, 18(2), dez. 2014, (3-16)
