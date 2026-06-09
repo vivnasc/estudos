@@ -31,6 +31,12 @@ Para cada aplicação útil (e só essas):
 - dá uma IDEIA concreta (ebook, post/carrossel, reel, etapa de PWA, capítulo…),
   respeitando a voz e o glossário desse produto.
 
+OPORTUNIDADES NOVAS (importante — não perder): se a aula abrir uma ideia
+genuinamente VALIOSA que NÃO cabe em nenhum produto atual (um produto, oferta,
+público, formato ou ângulo novo), aponta-a também. Marca essas linhas com a
+etiqueta [oportunidade] em vez de um tema, descreve o quê + para quem + porquê
+agora, em 1-2 frases. Só quando for mesmo uma oportunidade real; não inventes.
+
 ═══ NOTAS ═══
 Falhas de transcrição ou pontos que ficaram pouco claros.
 
@@ -45,4 +51,6 @@ INSTRUÇÕES DE FORMATO PARA O PIPELINE:
 - Marca cada aplicação do Bloco C com a etiqueta do tema entre parênteses
   retos no início da linha ([corpo], [amor], [maternidade], [prosperidade]),
   seguida do nome do produto a negrito. Ex.: "[maternidade] **FreeMe** — …".
+  Para oportunidades fora dos produtos atuais, usa a etiqueta [oportunidade]
+  no início da linha. Ex.: "[oportunidade] **Novo:** mini-curso sobre …".
   NÃO escrevas qualquer linha para temas/produtos sem ligação real.

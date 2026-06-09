@@ -55,17 +55,51 @@ function itemUtil(texto) {
   return !negativos.some((re) => re.test(t));
 }
 
+// Deriva a que PRODUTO (repo) a ideia pertence. Olha primeiro a "Ideia
+// concreta" (onde o entregável é nomeado), depois o texto todo.
+function matchProduto(s) {
+  if (/synchim|synchin/i.test(s)) return "SyncHim";
+  if (/free ?me/i.test(s)) return "FreeMe";
+  if (/infonte|sete ecos/i.test(s)) return "Infonte";
+  if (/ebook|guia|cole[cç][aã]o|cole[cç][õo]es|\blivro|\bloja\b|universo/i.test(s)) return "Livros";
+  return null;
+}
+function derivarProduto(texto) {
+  const m = /ideia[^:\n]*:\s*([\s\S]+)/i.exec(texto);
+  return matchProduto(m ? m[1] : "") || matchProduto(texto) || "Outro";
+}
+
+// Título curto e legível para o cartão: a "Ideia concreta" (1ª frase).
+function ideiaCurta(texto) {
+  const m = /ideia[^:\n]*:\s*([\s\S]+)/i.exec(texto);
+  let s = (m ? m[1] : texto).replace(/\*\*/g, "").replace(/\s+/g, " ").trim();
+  const frase = s.split(/\.\s/)[0];
+  if (frase.length > 30) s = frase;
+  if (s.length > 180) s = s.slice(0, 177).trimEnd() + "…";
+  return s;
+}
+
 function extrairItensProduto(md, fonte) {
   const linhas = md.split(/\r?\n/);
   const itens = [];
   let atual = null;
-  const flush = () => { if (atual && atual.texto.trim() && itemUtil(atual.texto)) itens.push(atual); atual = null; };
+  const flush = () => {
+    if (atual && atual.texto.trim() && itemUtil(atual.texto)) {
+      atual.produto = atual._op ? "Oportunidade" : derivarProduto(atual.texto);
+      atual.ideia = ideiaCurta(atual.texto);
+      delete atual._op;
+      itens.push(atual);
+    }
+    atual = null;
+  };
+  const RE_TAG = /\[(corpo|amor|maternidade|prosperidade|oportunidade)\]/gi;
   for (const linha of linhas) {
-    const tags = [...linha.matchAll(/\[(corpo|amor|maternidade|prosperidade)\]/gi)].map((m) => m[1].toLowerCase());
-    if (tags.length) {
+    const todas = [...linha.matchAll(RE_TAG)].map((m) => m[1].toLowerCase());
+    if (todas.length) {
       flush();
-      const texto = linha.replace(/\[(corpo|amor|maternidade|prosperidade)\]/gi, "").replace(/^[\s\-*•:]+/, "").trim();
-      atual = { temas: [...new Set(tags)], texto, ...fonte };
+      const temas = todas.filter((t) => t !== "oportunidade");
+      const texto = linha.replace(RE_TAG, "").replace(/^[\s\-*•:]+/, "").trim();
+      atual = { temas: [...new Set(temas)], texto, ...fonte, _op: todas.includes("oportunidade") };
     } else if (atual && linha.trim()) {
       atual.texto += "\n" + linha.trim();
     } else if (atual) { flush(); }

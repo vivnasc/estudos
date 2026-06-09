@@ -1,10 +1,9 @@
 import Link from "next/link";
 import BancoProduto from "./BancoProduto";
-import { getBanco, getTemas } from "../../lib/conteudo";
+import { getBanco } from "../../lib/conteudo";
 
 export default function ProdutoPage() {
   const banco = getBanco();
-  const temas = getTemas();
 
   return (
     <>
@@ -13,15 +12,12 @@ export default function ProdutoPage() {
       </div>
       <h1>Banco de Produto</h1>
       <p className="lead">
-        Só ideias <strong>úteis</strong>: como o que aprendes alimenta os teus
-        produtos reais (Infonte, FreeMe, Coleções…). Cada cartão nomeia o produto
-        e diz de que aula veio. Sem "a aula não falou disto" — se não há ligação,
-        não aparece.
+        O que aprendes, pronto a <strong>implementar</strong>. Filtra pelo teu
+        produto (Infonte, FreeMe, SyncHim, Livros), lê a ideia numa linha e abre
+        o rascunho só se quiseres. Cada cartão diz de que aula veio.
       </p>
 
-      <BancoProduto banco={banco} temas={temas} />
-
-      <div className="footer">corpo · amor · maternidade · prosperidade</div>
+      <BancoProduto banco={banco} />
     </>
   );
 }
