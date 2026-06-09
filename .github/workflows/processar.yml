@@ -26,10 +26,9 @@ on:
         required: false
         default: 'aula'
 
-# Evita corridas simultâneas a fazerem commit ao mesmo tempo.
-concurrency:
-  group: processar-aulas
-  cancel-in-progress: false
+# Não usamos um grupo de concorrência único: queremos que vários envios
+# simultâneos corram em paralelo (um grupo único cancelava os que ficavam em
+# fila). As colisões de push são resolvidas com rebase + retry no fim.
 
 permissions:
   contents: write
@@ -73,7 +72,16 @@ jobs:
           git reset -q -- ':(glob)**/_audio/**' 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "Nada de novo para processar."
-          else
-            git commit -m "Processamento automático de aulas"
-            git push
+            exit 0
           fi
+          git commit -m "Processamento automático de aulas"
+          # Vários runs podem fazer push ao mesmo tempo: rebase + retry.
+          for n in 1 2 3 4 5 6 7 8; do
+            if git push origin HEAD:main; then
+              echo "push ok (tentativa $n)"; exit 0
+            fi
+            echo "push falhou (tentativa $n), a rebasear..."
+            git pull --rebase origin main || true
+            sleep $((RANDOM % 5 + 2))
+          done
+          echo "push falhou após várias tentativas"; exit 1

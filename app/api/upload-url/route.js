@@ -25,12 +25,16 @@ export async function POST(request) {
   // Cria o bucket público se ainda não existir (idempotente).
   await supa.storage.createBucket(BUCKET, { public: true }).catch(() => {});
 
-  const seguro = String(filename).split(/[\\/]/).pop().replace(/[^\w.\- ]+/g, "_").trim() || "ficheiro";
+  const seguro = String(filename).split(/[\\/]/).pop()
+    .replace(/\s+/g, "_")
+    .replace(/[^\w.\-]+/g, "_")
+    .replace(/_+/g, "_")
+    .replace(/^_|_$/g, "") || "ficheiro";
   const caminho = `${Date.now()}-${seguro}`;
 
   const { data, error } = await supa.storage.from(BUCKET).createSignedUploadUrl(caminho);
   if (error) return Response.json({ error: error.message }, { status: 500 });
 
-  const publicUrl = `${url.replace(/\/$/, "")}/storage/v1/object/public/${BUCKET}/${caminho}`;
+  const publicUrl = encodeURI(`${url.replace(/\/$/, "")}/storage/v1/object/public/${BUCKET}/${caminho}`);
   return Response.json({ path: data.path, token: data.token, publicUrl });
 }
