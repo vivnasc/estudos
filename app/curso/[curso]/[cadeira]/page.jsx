@@ -69,6 +69,12 @@ export default function CadeiraPage({ params }) {
               <Markdown>{u.objetivos}</Markdown>
             </details>
           )}
+          {u.resumo && (
+            <details className="painel-uni">
+              <summary>📘 Resumo da unidade — a matéria toda de relance</summary>
+              <Markdown>{u.resumo}</Markdown>
+            </details>
+          )}
           {u.complementar && (
             <details className="painel-uni">
               <summary>📎 Material complementar e leituras</summary>

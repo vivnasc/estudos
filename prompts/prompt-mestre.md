@@ -16,12 +16,20 @@ Produz três blocos separados e identificados:
 3. 5 a 8 perguntas prováveis de avaliação, com a resposta correta
 
 ═══ BLOCO C — PRODUTO ═══
-Aplicações ao meu ecossistema, organizadas pelos quatro temas:
-corpo, amor, maternidade, prosperidade.
-Só onde a aula realmente toca o tema — não forces ligações.
-Para cada aplicação diz: o que a aula valida, contradiz ou aprofunda,
-e que ideia concreta de conteúdo ou produto isso gera
-(ebook, travessia, post de Instagram, reel, PWA, etc.).
+Como este conhecimento ALIMENTA os meus produtos REAIS (ver o contexto do
+ecossistema: Infonte, Campanha 30 dias, FreeMe, SyncHim, Coleções, etc.).
+
+REGRA DE OURO: só traz o que for ÚTIL. Se a aula não tiver aplicação real a
+nenhum produto, NÃO escrevas nada sobre isso. NUNCA escrevas linhas a dizer
+"sem ligação", "não aborda", "não toca", "não forço" ou "por definir" — se não
+há ligação, simplesmente omite. Não me interessa o que a aula não diz; só o
+que dá para usar.
+
+Para cada aplicação útil (e só essas):
+- começa por nomear o PRODUTO concreto que isto alimenta (a negrito);
+- diz, em 1 frase, o que a aula valida, contradiz ou aprofunda nesse produto;
+- dá uma IDEIA concreta (ebook, post/carrossel, reel, etapa de PWA, capítulo…),
+  respeitando a voz e o glossário desse produto.
 
 ═══ NOTAS ═══
 Falhas de transcrição ou pontos que ficaram pouco claros.
@@ -35,4 +43,6 @@ INSTRUÇÕES DE FORMATO PARA O PIPELINE:
   R: <resposta>
   (um par por flashcard, linha a seguir a linha)
 - Marca cada aplicação do Bloco C com a etiqueta do tema entre parênteses
-  retos no início da linha: [corpo], [amor], [maternidade], [prosperidade].
+  retos no início da linha ([corpo], [amor], [maternidade], [prosperidade]),
+  seguida do nome do produto a negrito. Ex.: "[maternidade] **FreeMe** — …".
+  NÃO escrevas qualquer linha para temas/produtos sem ligação real.

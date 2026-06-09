@@ -13,8 +13,10 @@ export default function ProdutoPage() {
       </div>
       <h1>Banco de Produto</h1>
       <p className="lead">
-        Tudo o que as aulas geram para o teu ecossistema, reunido e filtrável
-        pelos quatro temas. Cada ideia diz de que aula veio.
+        Só ideias <strong>úteis</strong>: como o que aprendes alimenta os teus
+        produtos reais (Infonte, FreeMe, Coleções…). Cada cartão nomeia o produto
+        e diz de que aula veio. Sem "a aula não falou disto" — se não há ligação,
+        não aparece.
       </p>
 
       <BancoProduto banco={banco} temas={temas} />

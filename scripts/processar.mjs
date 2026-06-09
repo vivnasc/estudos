@@ -314,6 +314,58 @@ async function resumirObjetivos(objetivosTexto, materialBlocos) {
   return data.content.map((b) => (b.type === "text" ? b.text : "")).join("\n").trim();
 }
 
+// Junta as sínteses de todas as aulas de uma unidade num "Resumo da Unidade":
+// uma visão geral da matéria toda, por temas, ancorada na apostila.
+async function resumirUnidade(sintesesTexto, materialBlocos) {
+  const content = [];
+  if (materialBlocos.length) {
+    content.push({ type: "text", text: "APOSTILA / MATERIAL DESTA UNIDADE (a seguir). Usa-o para rigor de conceitos e termos." });
+    content.push(...materialBlocos);
+  }
+  content.push({
+    type: "text",
+    text:
+      "A seguir estão as SÍNTESES das aulas desta unidade. Junta-as num único " +
+      "\"Resumo da Unidade\": uma visão geral coerente e assimilável da matéria toda, " +
+      "em português de Portugal, em markdown. Regras:\n" +
+      "- Começa com 2-3 linhas a enquadrar a unidade.\n" +
+      "- Organiza por TEMAS/conceitos da unidade (não aula a aula); funde repetições.\n" +
+      "- Mantém nomes de autores, definições e classificações fiéis às sínteses e à apostila.\n" +
+      "- Termina com um bloco \"**Em síntese**\" com os pontos essenciais a reter.\n" +
+      "Não inventes nada fora das sínteses/apostila. Evita travessões longos.\n\n" +
+      "=== SÍNTESES DAS AULAS ===\n" + sintesesTexto,
+  });
+
+  const resp = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+    body: JSON.stringify({ model: CLAUDE_MODEL, max_tokens: 6000, messages: [{ role: "user", content }] }),
+  });
+  if (!resp.ok) throw new Error(`Claude falhou ao resumir unidade (${resp.status}): ${await resp.text()}`);
+  const data = await resp.json();
+  return data.content.map((b) => (b.type === "text" ? b.text : "")).join("\n").trim();
+}
+
+// Regenera o resumo de uma unidade a partir das sínteses das suas aulas.
+async function regenerarResumoUnidade(area, unidade, materialBlocos) {
+  if (!unidade) return;
+  const sintDir = path.join(area, "sinteses");
+  if (!fs.existsSync(sintDir)) return;
+  const re = new RegExp(`^U${unidade}[_-]`, "i");
+  const ficheiros = fs.readdirSync(sintDir).filter((f) => f.endsWith(".md") && re.test(f)).sort();
+  if (!ficheiros.length) return;
+  const partes = ficheiros.map((f) => `## ${path.basename(f, ".md")}\n\n${fs.readFileSync(path.join(sintDir, f), "utf-8")}`);
+  try {
+    const resumo = await resumirUnidade(partes.join("\n\n---\n\n"), materialBlocos);
+    const dir = path.join(area, "resumos");
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, `U${unidade}.md`), resumo, "utf-8");
+    console.log(`[${area}] Resumo da Unidade ${unidade} atualizado (${ficheiros.length} aula(s)).`);
+  } catch (e) {
+    console.error(`[${area}] aviso: não consegui atualizar o resumo da Unidade ${unidade}: ${e.message}`);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Separa o Bloco C (produto) do resto (síntese = Bloco A + B [+ Notas])
 // ---------------------------------------------------------------------------
@@ -416,6 +468,9 @@ async function processarIngest() {
   fs.writeFileSync(sintPath, sintese, "utf-8");
   fs.writeFileSync(prodPath, produto, "utf-8");
   console.log(`[${area}] ${nomeBase} concluído.`);
+
+  // Atualiza o Resumo da Unidade (visão geral de todas as aulas da unidade).
+  await regenerarResumoUnidade(area, uniAula, material);
 }
 
 // ---------------------------------------------------------------------------
