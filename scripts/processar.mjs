@@ -55,6 +55,34 @@ function temFfmpeg() {
 }
 const FFMPEG = temFfmpeg();
 
+const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Quanto esperar antes de tentar de novo, a partir do Retry-After ou da
+// mensagem do Groq/Anthropic ("try again in 2m16.5s"). Limitado a 2 min.
+function esperaMs(resp, corpo) {
+  const ra = resp.headers.get("retry-after");
+  if (ra && !isNaN(+ra)) return Math.min(+ra * 1000, 120000);
+  const m = /try again in\s+(?:([0-9.]+)m)?([0-9.]+)s/i.exec(corpo || "");
+  if (m) {
+    const seg = (+(m[1] || 0)) * 60 + (+m[2] || 0);
+    return Math.min(seg * 1000 + 1500, 120000);
+  }
+  return 10000;
+}
+
+// fetch que aguenta limites de ritmo (429) e erros temporários (5xx):
+// espera e tenta de novo até maxTentativas. Devolve a última resposta.
+async function fetchRetry(url, opts, maxTentativas = 6) {
+  for (let i = 0; ; i++) {
+    const resp = await fetch(url, opts);
+    if (resp.ok || (resp.status !== 429 && resp.status < 500) || i >= maxTentativas - 1) return resp;
+    const corpo = await resp.clone().text().catch(() => "");
+    const ms = esperaMs(resp, corpo);
+    console.log(`    (ritmo/erro ${resp.status}; espero ${Math.round(ms / 1000)}s e tento de novo ${i + 1}/${maxTentativas})`);
+    await dormir(ms);
+  }
+}
+
 function listarDirs(dir) {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir)
@@ -147,7 +175,7 @@ async function transcreverTroco(caminho) {
   form.append("language", "pt");
   form.append("response_format", "text");
 
-  const resp = await fetch("https://api.groq.com/openai/v1/audio/transcriptions", {
+  const resp = await fetchRetry("https://api.groq.com/openai/v1/audio/transcriptions", {
     method: "POST",
     headers: { Authorization: `Bearer ${GROQ_API_KEY}` },
     body: form,
@@ -260,7 +288,7 @@ async function processarComClaude(transcricao, materialBlocos, rotulo = "TRANSCR
   }
   content.push({ type: "text", text: `${PROMPT_MESTRE}\n\n=== ${rotulo} ===\n${transcricao}` });
 
-  const resp = await fetch("https://api.anthropic.com/v1/messages", {
+  const resp = await fetchRetry("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "x-api-key": ANTHROPIC_API_KEY,
@@ -300,7 +328,7 @@ async function resumirObjetivos(objetivosTexto, materialBlocos) {
       "=== OBJETIVOS (lista crua) ===\n" + objetivosTexto,
   });
 
-  const resp = await fetch("https://api.anthropic.com/v1/messages", {
+  const resp = await fetchRetry("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "x-api-key": ANTHROPIC_API_KEY,
@@ -336,7 +364,7 @@ async function resumirUnidade(sintesesTexto, materialBlocos) {
       "=== SÍNTESES DAS AULAS ===\n" + sintesesTexto,
   });
 
-  const resp = await fetch("https://api.anthropic.com/v1/messages", {
+  const resp = await fetchRetry("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
     body: JSON.stringify({ model: CLAUDE_MODEL, max_tokens: 6000, messages: [{ role: "user", content }] }),
@@ -399,7 +427,7 @@ async function gerarQuizUnidade(area, unidade, sintesesTexto, materialBlocos) {
       `=== SÍNTESES DAS AULAS ===\n${sintesesTexto}`,
   });
 
-  const resp = await fetch("https://api.anthropic.com/v1/messages", {
+  const resp = await fetchRetry("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
     body: JSON.stringify({ model: CLAUDE_MODEL, max_tokens: 8000, messages: [{ role: "user", content }] }),
