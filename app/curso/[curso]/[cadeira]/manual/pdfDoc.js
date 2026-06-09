@@ -168,17 +168,19 @@ function renderNode(node, prefix) {
     ]);
   }
 
-  // Secção nível 2 -> barra de cor + conteúdo em fluxo (achatado).
+  // Secção nível 2 -> barra de cor + conteúdo em fluxo (achatado). O
+  // minPresenceAhead alto reserva espaço para o título E as primeiras linhas
+  // do conteúdo — senão o título salta sozinho para o fundo da página.
   if (node.level === 2) {
     return [
-      h(View, { style: s.h2bar, wrap: false, minPresenceAhead: 46 }, [h(View, { key: "t", style: s.h2tick }), h(Text, { key: "x", style: s.h2text }, titleText)]),
+      h(View, { style: s.h2bar, wrap: false, minPresenceAhead: 74 }, [h(View, { key: "t", style: s.h2tick }), h(Text, { key: "x", style: s.h2text }, titleText)]),
       ...kids,
     ];
   }
 
   // Nível 1 -> título + conteúdo em fluxo (achatado).
   return [
-    h(View, { style: { marginTop: 10 }, wrap: false, minPresenceAhead: 46 }, Runs(node.runs, s.h1)),
+    h(View, { style: { marginTop: 10 }, wrap: false, minPresenceAhead: 74 }, Runs(node.runs, s.h1)),
     ...kids,
   ];
 }
