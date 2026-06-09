@@ -42,11 +42,24 @@ function extrairFlashcards(md) {
   return { flashcards: cards, sinteseSemCards: mantidas.join("\n").replace(/\n{3,}/g, "\n\n").trim() };
 }
 
+// Um item de produto só interessa se for uma aplicação ÚTIL. Descarta os
+// "negativos" que o modelo às vezes escreve ("sem ligação", "não aborda"…).
+function itemUtil(texto) {
+  const t = texto.toLowerCase().trim();
+  if (t.length < 25) return false;
+  const negativos = [
+    /sem liga[cç][aã]o/, /n[aã]o for[cç]o/, /n[aã]o aborda/, /n[aã]o toca/,
+    /sem aplica[cç][aã]o/, /\(por definir\)/, /n[aã]o se aplica/,
+    /nenhum produto/, /^sem /, /n[aã]o h[aá] liga[cç][aã]o/,
+  ];
+  return !negativos.some((re) => re.test(t));
+}
+
 function extrairItensProduto(md, fonte) {
   const linhas = md.split(/\r?\n/);
   const itens = [];
   let atual = null;
-  const flush = () => { if (atual && atual.texto.trim()) itens.push(atual); atual = null; };
+  const flush = () => { if (atual && atual.texto.trim() && itemUtil(atual.texto)) itens.push(atual); atual = null; };
   for (const linha of linhas) {
     const tags = [...linha.matchAll(/\[(corpo|amor|maternidade|prosperidade)\]/gi)].map((m) => m[1].toLowerCase());
     if (tags.length) {
@@ -128,13 +141,18 @@ function lerPainelUnidade(cadeiraDir, sub) {
 }
 
 function extrasDe(dir) {
-  return { objetivos: lerPainelUnidade(dir, "objetivos"), complementar: lerPainelUnidade(dir, "complementar") };
+  return {
+    objetivos: lerPainelUnidade(dir, "objetivos"),
+    complementar: lerPainelUnidade(dir, "complementar"),
+    resumo: lerPainelUnidade(dir, "resumos"),
+  };
 }
 
 // Agrupa as aulas pelas Unidades (módulos). Cada disciplina tem 4 por defeito.
 function agruparUnidades(aulas, extras = {}) {
   const objetivos = extras.objetivos || {};
   const complementar = extras.complementar || {};
+  const resumo = extras.resumo || {};
   const nums = aulas.map((a) => a.unidade).filter((n) => n);
   const max = Math.max(4, ...nums);
   const unidades = [];
@@ -144,11 +162,12 @@ function agruparUnidades(aulas, extras = {}) {
       titulo: `Unidade ${n}`,
       objetivos: objetivos[n] || "",
       complementar: complementar[n] || "",
+      resumo: resumo[n] || "",
       aulas: aulas.filter((a) => a.unidade === n),
     });
   }
   const soltas = aulas.filter((a) => !a.unidade);
-  if (soltas.length) unidades.push({ n: 0, titulo: "Outras aulas", objetivos: "", complementar: "", aulas: soltas });
+  if (soltas.length) unidades.push({ n: 0, titulo: "Outras aulas", objetivos: "", complementar: "", resumo: "", aulas: soltas });
   return unidades;
 }
 
