@@ -1,0 +1,134 @@
+[
+  {
+    "p": "Qual é a designação histórica da Psicologia Transpessoal dentro das forças da psicologia?",
+    "opcoes": [
+      "Primeira força da psicologia",
+      "Segunda força da psicologia",
+      "Terceira força da psicologia",
+      "Quarta força da psicologia"
+    ],
+    "correta": 3,
+    "explica": "A Psicologia Transpessoal é considerada a quarta força porque sucede e integra as três forças anteriores: psicanálise (1.ª), behaviorismo (2.ª) e humanismo (3.ª), acrescentando a dimensão espiritual e da transcendência."
+  },
+  {
+    "p": "Qual é o equívoco de linguagem mais comum cometido em relação à psicanálise?",
+    "opcoes": [
+      "Usar psicanálise como sinónimo de inconsciente",
+      "Usar psicanálise como sinónimo de psicoterapia",
+      "Usar psicanálise como sinónimo de behaviorismo",
+      "Usar psicanálise como sinónimo de humanismo"
+    ],
+    "correta": 1,
+    "explica": "Psicanálise é o construto teórico e a abordagem; psicoterapia é o trabalho clínico realizado no setting com o sujeito. São conceitos distintos que frequentemente são confundidos."
+  },
+  {
+    "p": "Como Freud define a sexualidade na sua teoria?",
+    "opcoes": [
+      "Como ato sexual biológico exclusivamente",
+      "Como busca de satisfação e prazer que vai do biológico ao psíquico",
+      "Como repressão de desejos inconscientes",
+      "Como mecanismo de defesa do ego"
+    ],
+    "correta": 1,
+    "explica": "Para Freud, sexualidade é a busca de satisfação e prazer em qualquer forma, biológica ou psíquica, não se reduzindo ao ato sexual biológico. Toda pulsão sexual tem fonte, força, objeto e objetivo (satisfação/prazer)."
+  },
+  {
+    "p": "Qual é o objeto de estudo exclusivo do behaviorismo segundo Watson?",
+    "opcoes": [
+      "O inconsciente e os processos mentais inacessíveis",
+      "O comportamento observável",
+      "A consciência e a introspecção",
+      "Os arquétipos e símbolos da mente"
+    ],
+    "correta": 1,
+    "explica": "O behaviorismo estuda exclusivamente o comportamento observável como objeto científico da psicologia. Watson deliberadamente exclui consciência, introspecção e estados internos do seu escopo."
+  },
+  {
+    "p": "O que propôs Galileu Galilei relativamente à relação entre ciência e religião?",
+    "opcoes": [
+      "Que a religião deveria desaparecer perante a ciência",
+      "Que ambas competem inevitavelmente pela verdade",
+      "Que cada uma tinha território próprio: ciência explica o 'como', religião explica o 'se'",
+      "Que ciência e religião são a mesma coisa"
+    ],
+    "correta": 2,
+    "explica": "Galileu propôs que à ciência caberia explicar 'como' (mecanismos, desenvolvimento); à religião caberia explicar 'se' (espiritualidade, moral). Uma proposta de coexistência com territórios separados."
+  },
+  {
+    "p": "Qual é a contribuição central da Gestalterapia de Fritz Perls para a Psicologia Transpessoal?",
+    "opcoes": [
+      "O estudo exclusivo da mente consciente",
+      "A visão holística de que todas as partes da experiência influenciam o todo e o sujeito só pode ser compreendido no seu contexto",
+      "A separação entre corpo e mente",
+      "A negação da espiritualidade como dimensão válida"
+    ],
+    "correta": 1,
+    "explica": "Perls defendia uma perspetiva holística segundo a qual toda parte da experiência humana afeta o todo, exigindo compreender o sujeito em relação ao seu contexto sem perder de vista o sujeito inteiro."
+  },
+  {
+    "p": "Quais são, em ordem, os cinco níveis da pirâmide de necessidades de Maslow?",
+    "opcoes": [
+      "Segurança, fisiológica, pertença, estima, autorrealização",
+      "Fisiológica, segurança, pertença, estima, autorrealização",
+      "Autorrealização, estima, pertença, segurança, fisiológica",
+      "Pertença, fisiológica, estima, segurança, autorrealização"
+    ],
+    "correta": 1,
+    "explica": "A pirâmide segue a ordem: (1) fisiológica, (2) segurança, (3) pertença, (4) estima, (5) autorrealização. Cada nível só é ativado quando o anterior está satisfeito."
+  },
+  {
+    "p": "O que são as couraças na bioenergética de Lowen?",
+    "opcoes": [
+      "Estruturas psicológicas de defesa mental",
+      "Tensões e dores musculares crónicas resultantes de aspetos psíquicos não trabalhados",
+      "Mecanismos de repressão do inconsciente",
+      "Símbolos do inconsciente coletivo"
+    ],
+    "correta": 1,
+    "explica": "Couraças são camadas de tensão muscular crónica que o corpo acumula como consequência de aspetos psíquicos não resolvidos. O corpo é um arquivo vivo da psique."
+  },
+  {
+    "p": "Qual a diferença fundamental entre individuação e individualismo em Jung?",
+    "opcoes": [
+      "Não há diferença, são sinónimos",
+      "Individuação é integração dos opostos; individualismo é centramento no eu individual",
+      "Individualismo é integração; individuação é isolamento",
+      "Ambos referem-se exclusivamente ao inconsciente coletivo"
+    ],
+    "correta": 1,
+    "explica": "Individuação é o processo psicológico de integração do consciente e inconsciente que constrói o self; individualismo é o centramento no ego pessoal. São conceitos opostos."
+  },
+  {
+    "p": "O que afirma o princípio da incerteza de Heisenberg sobre a neutralidade do investigador científico?",
+    "opcoes": [
+      "Que é totalmente possível manter neutralidade absoluta",
+      "Que é impossível medir algo subjetivo com neutralidade porque o observador interfere no fenômeno",
+      "Que o investigador deve sempre interferir propositadamente",
+      "Que a neutralidade é o aspeto mais importante da investigação"
+    ],
+    "correta": 1,
+    "explica": "Heisenberg mostrou que é impossível medir fenómenos subjetivos sem que o próprio observador interfira. A neutralidade do observador é um parâmetro ortodoxo, não uma realidade possível."
+  },
+  {
+    "p": "O que David Bohm defende com o conceito de totalidade ininterrupta?",
+    "opcoes": [
+      "Que matéria e mente são substâncias completamente separadas",
+      "Que matéria e mente são aspetos distintos de um mesmo movimento contínuo",
+      "Que apenas a matéria é real",
+      "Que a mente existe isolada do mundo físico"
+    ],
+    "correta": 1,
+    "explica": "Bohm propõe que matéria e mente são aspectos distintos de um único movimento ininterrupto, não substâncias separadas. Isto exige uma análise holística e de totalidade."
+  },
+  {
+    "p": "Qual é o objetivo terapêutico central da Psicologia Transpessoal?",
+    "opcoes": [
+      "Restaurar a normalidade comportamental do sujeito",
+      "Eliminar completamente o inconsciente",
+      "Promover o alcance de uma consciência unificada mediante a autorrealização",
+      "Aumentar a racionalidade e eliminar a emoção"
+    ],
+    "correta": 2,
+    "explica": "A Psicologia Transpessoal visa o desenvolvimento das potencialidades do sujeito e o alcance da autorrealização através de uma consciência unificada que integra dimensões transcendentes e místicas."
+  }
+]
