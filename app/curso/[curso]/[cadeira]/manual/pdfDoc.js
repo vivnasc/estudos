@@ -176,54 +176,70 @@ function renderNode(node, prefix) {
   // caixas com fundo entre páginas, por isso uma caixa alta salta inteira e
   // deixa um buraco. Se tiver sub-secções, ou se o conteúdo for longo, o título
   // vira uma faixa de cabeçalho e o conteúdo flui solto a seguir (parte bem).
+  // Caixa contida só para conteúdo mesmo curto (1-2 blocos, poucas linhas).
+  // Tudo o resto flui — senão a caixa fica alta, não parte, e salta a página.
   const hasChildSection = node.children.some((c) => c.kind === "section");
-  const flui = hasChildSection || estLines(node) > 6;
-  const firstIsLeaf = node.children[0] && node.children[0].kind === "leaf";
-  // Cabeçalho que não parte e não fica órfão (puxa o 1º filho consigo).
-  const bond = (children, mpa = 28) => h(View, { wrap: false, minPresenceAhead: mpa }, children);
+  const flui = hasChildSection || node.children.length > 1 || estLines(node) > 3;
 
   // Caixa de destaque (callout).
   if (kw) {
     const label = h(Text, { key: "l", style: [s.calloutLabel, { color: kw.fg }] }, kw.label);
     const title = h(Text, { key: "t", style: s.cardTitle }, titleText);
     if (flui) {
-      // faixa de cabeçalho colorida (pequena, não parte) + conteúdo a fluir.
-      // A reserva de espaço evita o cabeçalho órfão no fundo da página.
-      const head = h(View, { key: "hd", style: [s.calloutHead, { backgroundColor: kw.bg, borderLeftColor: kw.bar }], wrap: false, minPresenceAhead: 64 }, [label, title]);
+      // longo/com sub-secções -> faixa de cabeçalho (marcada como cabeçalho) +
+      // conteúdo a fluir. A colagem é feita no fim, em glueHeads.
+      const head = h(View, { key: "hd", __head: true, style: [s.calloutHead, { backgroundColor: kw.bg, borderLeftColor: kw.bar }] }, [label, title]);
       return [head, ...kids];
     }
-    // curto -> caixa contida; título colado à 1ª linha
-    const box = (children) => h(View, { style: [s.callout, { backgroundColor: kw.bg, borderLeftColor: kw.bar }], minPresenceAhead: 30 }, children);
-    if (firstIsLeaf) return box([bond([label, title, kids[0]], 0), ...kids.slice(1)]);
-    return box([label, title, ...kids]);
+    // curto -> caixa contida atómica (marcada __box: na colagem é tratada como
+    // indivisível, logo cola-se ao cabeçalho que a precede).
+    return h(View, { __box: true, style: [s.callout, { backgroundColor: kw.bg, borderLeftColor: kw.bar }], minPresenceAhead: 24 }, [label, title, ...kids]);
   }
 
   // Conceito (nível 3+) com corpo -> cartão.
   if (node.level >= 3 && node.children.length) {
     const title = h(Text, { key: "t", style: s.cardTitle }, titleText);
     if (flui) {
-      // título como cabeçalho com barra + conteúdo a fluir (parte bem)
-      const head = h(View, { key: "hd", style: s.h2bar, wrap: false, minPresenceAhead: 64 }, [h(View, { key: "k", style: s.h2tick }), h(Text, { key: "x", style: s.h2text }, titleText)]);
+      const head = h(View, { key: "hd", __head: true, style: s.h2bar }, [h(View, { key: "k", style: s.h2tick }), h(Text, { key: "x", style: s.h2text }, titleText)]);
       return [head, ...kids];
     }
-    if (firstIsLeaf) return h(View, { style: s.card, minPresenceAhead: 30 }, [bond([title, kids[0]], 0), ...kids.slice(1)]);
-    return h(View, { style: s.card, minPresenceAhead: 30 }, [title, ...kids]);
+    return h(View, { __box: true, style: s.card, minPresenceAhead: 24 }, [title, ...kids]);
   }
 
-  // Secção (níveis 1 e 2): o título é COLADO à primeira linha do conteúdo num
-  // bloco que não parte (wrap:false), por isso nunca fica sozinho no fundo da
-  // página. O resto do conteúdo flui livremente a seguir.
+  // Secção (níveis 1 e 2): só o cabeçalho (marcado); o conteúdo flui a seguir.
   const bar = node.level === 2
-    ? h(View, { key: "hb", style: s.h2bar, wrap: false }, [h(View, { key: "t", style: s.h2tick }), h(Text, { key: "x", style: s.h2text }, titleText)])
-    : h(View, { key: "hb", style: { marginTop: 10 } }, Runs(node.runs, s.h1));
-  const first = kids.length ? kids[0] : null;
-  const rest = kids.slice(1);
-  const bonded = h(View, { wrap: false, minPresenceAhead: 28 }, first ? [bar, first] : [bar]);
-  return [bonded, ...rest];
+    ? h(View, { key: "hb", __head: true, style: s.h2bar }, [h(View, { key: "t", style: s.h2tick }), h(Text, { key: "x", style: s.h2text }, titleText)])
+    : h(View, { key: "hb", __head: true, style: { marginTop: 10 } }, Runs(node.runs, s.h1));
+  return [bar, ...kids];
+}
+
+// Cola cada SEQUÊNCIA de cabeçalhos seguidos num bloco que não parte, com uma
+// reserva de espaço (minPresenceAhead) que garante que ~2-3 linhas do conteúdo
+// seguinte ficam na mesma página — assim o cabeçalho nunca fica órfão no fundo,
+// mas o texto a seguir flui e parte naturalmente (não incha o bloco). Só se o
+// que se segue for uma caixa atómica (__box, não parte) é que ela entra na
+// colagem, pois senão ficaria ela própria órfã do cabeçalho.
+function glueHeads(els) {
+  const out = [];
+  let i = 0;
+  while (i < els.length) {
+    const el = els[i];
+    if (el && el.props && el.props.__head) {
+      const grp = [el];
+      i++;
+      while (i < els.length && els[i] && els[i].props && els[i].props.__head) { grp.push(els[i]); i++; }
+      if (i < els.length && els[i] && els[i].props && els[i].props.__box) { grp.push(els[i]); i++; }
+      out.push(h(View, { wrap: false, minPresenceAhead: 44 }, grp));
+    } else {
+      out.push(el);
+      i++;
+    }
+  }
+  return out.map((el, k) => (el ? React.cloneElement(el, { key: `g${k}` }) : null));
 }
 
 function Markdown(md, prefix) {
-  return renderChildren(nest(parseMarkdown(md)), prefix);
+  return glueHeads(renderChildren(nest(parseMarkdown(md)), prefix));
 }
 
 export function buildManualDocument({ curso, cadeira, unidades, hoje }) {
