@@ -1,0 +1,10 @@
+═══ BLOCO C — PRODUTO ═══
+
+[prosperidade] **Infonte** — A aula valida a tese de que decisões tomadas isoladamente perdem força e que "a soma das partes" produz mais resultado; isto aprofunda a etapa de focar/materializar do Infonte, mostrando que dispersão é também falta de integração interna, não só excesso de tarefas.
+Ideia: post da manhã (carrossel didáctico 10 slides) intitulado "vinte abas abertas na cabeça também são vinte decisões tomadas sozinhas" — leva a leitora a ver que cada projecto solto é uma parte sem sistema, e fecha com a ferramenta "esvaziar a mesa" para juntar o que andava disperso numa só direcção. Selo de fecho: "infonte. clareza, foco, acção."
+
+[prosperidade] **Campanha 30 dias** — A aula reforça a ideia de "agir de chão" versus dispersão, ao mostrar que o esforço coletivo e integrado bate a fome de perseguir em sete direcções.
+Ideia: post da tarde (carrossel emocional, "Eco" do manhã) sobre a diferença entre "fazer muito para valer" (correr atrás de tudo, sozinha) e bastar-se (escolher um foco e dar-lhe corpo). Mantém pt-PT, sem travessões, e a tese-mãe "a abundância não responde a quem a persegue, responde a quem se basta".
+
+[maternidade] **FreeMe** — A aula valida, no registo da gestão, a frase-mãe do produto "pousar o que não era teu para carregar": a ideia de que uma parte não pode ser sobrecarregada sem afetar todo o sistema espelha a carga invisível da mãe que carrega tudo sozinha e desorganiza a casa inteira.
+Ideia: caption de campanha (IG, @vivianne.dos.santos) que parte da metáfora organizacional para a casa — "numa casa, como numa equipa, quando uma só pessoa carrega tudo, o sistema inteiro adoece. A mãe não é um departamento isolado." Liga ao bloqueio O peso e remata com o CTA padrão "Diagnóstico grátis. Link na bio." Sem prometer cura, no registo "carregas" e "pousar".
