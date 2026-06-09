@@ -9,7 +9,7 @@ const EXT_OK = /\.(mp3|m4a|wav|mp4|aac|ogg|flac|webm|pdf|txt|md)$/i;
 
 function sanitizarNome(nome) {
   const base = String(nome || "").split(/[\\/]/).pop() || "";
-  return base.replace(/[^\w.\- ]+/g, "_").trim();
+  return base.replace(/\s+/g, "_").replace(/[^\w.\-]+/g, "_").replace(/_+/g, "_").replace(/^_|_$/g, "");
 }
 
 export async function POST(request) {

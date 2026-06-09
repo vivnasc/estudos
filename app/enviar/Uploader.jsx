@@ -187,12 +187,13 @@ export default function Uploader({ cursos, partilhada }) {
       )}
 
       <button className="btn" onClick={enviarTodos} disabled={correr || porEnviar === 0}>
-        {correr ? "A enviar…" : porEnviar > 0 ? `Enviar ${porEnviar} aula${porEnviar === 1 ? "" : "s"}` : feitos > 0 ? "Tudo enviado ✓" : "Enviar aulas"}
+        {correr ? "A enviar…" : porEnviar > 0 ? `Enviar ${porEnviar} ficheiro${porEnviar === 1 ? "" : "s"}` : feitos > 0 ? "Tudo enviado ✓" : "Enviar"}
       </button>
 
       {feitos > 0 && !correr && (
         <div className="txt" style={{ fontSize: 13.5 }}>
-          {feitos} aula{feitos === 1 ? "" : "s"} a processar. Em alguns minutos aparecem na disciplina com síntese e flashcards.
+          {feitos} ficheiro{feitos === 1 ? "" : "s"} enviado{feitos === 1 ? "" : "s"} para processar. Em alguns minutos aparece na disciplina.
+          {" "}<button className="fi-x" onClick={() => { setItens([]); setAviso(""); }}>limpar lista</button>
         </div>
       )}
     </div>
