@@ -88,7 +88,7 @@ jobs:
               echo "push ok (tentativa $n)"; exit 0
             fi
             echo "push falhou (tentativa $n), a rebasear..."
-            git pull --rebase origin main || true
+            git pull --rebase -X ours origin main || true
             sleep $((RANDOM % 5 + 2))
           done
           echo "push falhou após várias tentativas"; exit 1
