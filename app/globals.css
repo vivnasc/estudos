@@ -232,22 +232,54 @@ h2 { font-family: var(--serif); font-weight: 700; font-size: 20px; margin: 36px 
 }
 .chip:hover { color: var(--ink); }
 .chip[data-on="true"] { color: #17130d; font-weight: 700; }
-.chip[data-tema="corpo"][data-on="true"] { background: var(--corpo); border-color: var(--corpo); }
-.chip[data-tema="amor"][data-on="true"] { background: var(--amor); border-color: var(--amor); }
-.chip[data-tema="maternidade"][data-on="true"] { background: var(--maternidade); border-color: var(--maternidade); }
-.chip[data-tema="prosperidade"][data-on="true"] { background: var(--prosperidade); border-color: var(--prosperidade); }
-.chip[data-tema="todos"][data-on="true"] { background: var(--gold); border-color: var(--gold); }
+/* Cor por produto (uma cor por repo) */
+.cor-Infonte { --c: #e0a83a; }
+.cor-FreeMe { --c: #d98aa6; }
+.cor-SyncHim { --c: #5fb0c4; }
+.cor-Livros { --c: #b18cd9; }
+.cor-Oportunidade { --c: #f2c14e; }
+.cor-Outro { --c: #9a9488; }
+.chip[data-prod="Infonte"] { --c: #e0a83a; }
+.chip[data-prod="FreeMe"] { --c: #d98aa6; }
+.chip[data-prod="SyncHim"] { --c: #5fb0c4; }
+.chip[data-prod="Livros"] { --c: #b18cd9; }
+.chip[data-prod="Oportunidade"] { --c: #f2c14e; }
+.chip[data-prod="Outro"] { --c: #9a9488; }
+.chip[data-prod][data-on="true"] { background: var(--c); border-color: var(--c); }
+.chip[data-prod="todos"][data-on="true"] { background: var(--gold); border-color: var(--gold); }
 
 .prod { display: flex; flex-direction: column; gap: 12px; }
-.prod-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
-.prod-item .tags { display: flex; gap: 6px; margin-bottom: 9px; flex-wrap: wrap; }
+.prod-item {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 18px; border-left: 3px solid var(--c, var(--line));
+}
+.prod-item[data-prod="Infonte"] { --c: #e0a83a; }
+.prod-item[data-prod="FreeMe"] { --c: #d98aa6; }
+.prod-item[data-prod="SyncHim"] { --c: #5fb0c4; }
+.prod-item[data-prod="Livros"] { --c: #b18cd9; }
+.prod-item[data-prod="Oportunidade"] { --c: #f2c14e; background: color-mix(in srgb, #f2c14e 7%, var(--card)); }
+.prod-item[data-prod="Outro"] { --c: #9a9488; }
+.prod-top { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 9px; }
+.prod-badge {
+  font-size: 11px; font-weight: 800; letter-spacing: .02em; padding: 3px 10px;
+  border-radius: 999px; color: #17130d; background: var(--c, var(--gold));
+}
+.prod-ideia { line-height: 1.5; font-size: 15.5px; }
+.prod-det { margin-top: 10px; }
+.prod-det > summary {
+  cursor: pointer; font-size: 12.5px; color: var(--gold-soft); list-style: none;
+  display: inline-flex; align-items: center; gap: 5px; user-select: none;
+}
+.prod-det > summary::before { content: "▸"; font-size: 10px; }
+.prod-det[open] > summary::before { content: "▾"; }
+.prod-det > summary:hover { color: var(--gold); }
+.prod-det :where(p, ul, li) { font-size: 14px; line-height: 1.55; }
 .tag { font-size: 10.5px; text-transform: uppercase; letter-spacing: .07em; padding: 3px 9px; border-radius: 999px; font-weight: 700; color: #17130d; }
 .tag[data-tema="corpo"] { background: var(--corpo); }
 .tag[data-tema="amor"] { background: var(--amor); }
 .tag[data-tema="maternidade"] { background: var(--maternidade); }
 .tag[data-tema="prosperidade"] { background: var(--prosperidade); }
 .prod-item .src { font-size: 12px; color: var(--ink-dim); margin-top: 10px; font-style: italic; }
-.prod-item .txt { line-height: 1.6; white-space: pre-wrap; }
 
 .empty { color: var(--ink-soft); padding: 30px; text-align: center; border: 1px dashed var(--line-strong); border-radius: 12px; background: var(--card); }
 .footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-dim); text-align: center; }
