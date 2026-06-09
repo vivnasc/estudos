@@ -21,7 +21,10 @@ import { execFileSync } from "node:child_process";
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
-const CLAUDE_MODEL = "claude-opus-4-8";
+// Síntese e objetivos: Sonnet (forte e ~5x mais barato que o Opus).
+// Resumo e quiz: Haiku (~20x mais barato), trabalham a partir das sínteses.
+const CLAUDE_MODEL = "claude-sonnet-4-6";
+const CLAUDE_MODEL_RAPIDO = "claude-haiku-4-5-20251001";
 const GROQ_MODEL = "whisper-large-v3";
 const PROMPT_MESTRE = fs.readFileSync("prompts/prompt-mestre.md", "utf-8");
 
@@ -367,7 +370,7 @@ async function resumirUnidade(sintesesTexto, materialBlocos) {
   const resp = await fetchRetry("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: CLAUDE_MODEL, max_tokens: 6000, messages: [{ role: "user", content }] }),
+    body: JSON.stringify({ model: CLAUDE_MODEL_RAPIDO, max_tokens: 6000, messages: [{ role: "user", content }] }),
   });
   if (!resp.ok) throw new Error(`Claude falhou ao resumir unidade (${resp.status}): ${await resp.text()}`);
   const data = await resp.json();
@@ -384,8 +387,10 @@ async function regenerarResumoUnidade(area, unidade, materialBlocos) {
   if (!ficheiros.length) return;
   const sintesesTexto = ficheiros.map((f) => `## ${path.basename(f, ".md")}\n\n${fs.readFileSync(path.join(sintDir, f), "utf-8")}`).join("\n\n---\n\n");
 
+  // Resumo e quiz trabalham só com as sínteses (já ancoradas na apostila),
+  // sem reenviar o PDF — poupa muitos tokens.
   try {
-    const resumo = await resumirUnidade(sintesesTexto, materialBlocos);
+    const resumo = await resumirUnidade(sintesesTexto, []);
     const dir = path.join(area, "resumos");
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, `U${unidade}.md`), resumo, "utf-8");
@@ -395,7 +400,7 @@ async function regenerarResumoUnidade(area, unidade, materialBlocos) {
   }
 
   try {
-    await gerarQuizUnidade(area, unidade, sintesesTexto, materialBlocos);
+    await gerarQuizUnidade(area, unidade, sintesesTexto, []);
   } catch (e) {
     console.error(`[${area}] aviso: quiz da Unidade ${unidade} falhou: ${e.message}`);
   }
@@ -430,7 +435,7 @@ async function gerarQuizUnidade(area, unidade, sintesesTexto, materialBlocos) {
   const resp = await fetchRetry("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: CLAUDE_MODEL, max_tokens: 8000, messages: [{ role: "user", content }] }),
+    body: JSON.stringify({ model: CLAUDE_MODEL_RAPIDO, max_tokens: 8000, messages: [{ role: "user", content }] }),
   });
   if (!resp.ok) throw new Error(`Claude ${resp.status}: ${await resp.text()}`);
   const data = await resp.json();
@@ -562,8 +567,7 @@ async function consolidarUnidade(area, unidade) {
   if (!/^(cursos\/[\w.-]+\/[\w.-]+|disciplina-partilhada)$/.test(area)) {
     throw new Error(`Área inválida: "${area}"`);
   }
-  const material = materialParaArea(area, unidade);
-  await regenerarResumoUnidade(area, unidade, material);
+  await regenerarResumoUnidade(area, unidade);
 }
 
 // ---------------------------------------------------------------------------
