@@ -1,0 +1,134 @@
+[
+  {
+    "p": "Qual é a principal crítica dirigida à Psicologia Transpessoal segundo a primeira aula?",
+    "opcoes": [
+      "Ser confundida com o espiritismo por trabalhar a espiritualidade como dimensão do sujeito",
+      "Não ter fundamentos científicos comprovados em laboratório",
+      "Ser demasiado focada em práticas religiosas específicas",
+      "Não respeitar a diversidade cultural das populações"
+    ],
+    "correta": 0,
+    "explica": "A aula esclarece que a confusão entre psicologia transpessoal e espiritismo nasce do facto de a teoria trabalhar a espiritualidade como dimensão do sujeito, levando profissionais que não reconhecem a espiritualidade como factor de saúde a rejeitar a abordagem sem a examinar com rigor."
+  },
+  {
+    "p": "Quais são os quatro pilares básicos da Psicologia Transpessoal descritos como campos energéticos?",
+    "opcoes": [
+      "Consciente, inconsciente, pré-consciente e supraconsciente",
+      "Físico (corpo), emocional, mental e espiritual",
+      "Razão, emoção, intuição e inspiração",
+      "Biológico, psicológico, social e existencial"
+    ],
+    "correta": 1,
+    "explica": "A aula identifica explicitamente os quatro pilares como corpo (físico), emocional, mental e espiritual, descrevendo-os como campos energéticos que fundamentam a cientificidade e a seriedade da teoria."
+  },
+  {
+    "p": "O que é a PNPIC e quantos procedimentos de práticas integrativas oferece o SUS?",
+    "opcoes": [
+      "Um programa de formação com 15 procedimentos autorizados",
+      "Uma política que oferece 29 procedimentos de práticas integrativas e complementares de forma gratuita",
+      "Um protocolo clínico com 40 tratamentos alternativos aprovados",
+      "Uma rede de hospitais com 20 especialidades em terapias complementares"
+    ],
+    "correta": 1,
+    "explica": "A Política Nacional de Práticas Integrativas e Complementares (PNPIC) autoriza e regulamenta 29 tratamentos alternativos, oferecidos gratuitamente à população, iniciados na atenção básica com acompanhamento interdisciplinar."
+  },
+  {
+    "p": "Qual é o argumento central contra a crítica do sincretismo dirigida à Psicologia Transpessoal?",
+    "opcoes": [
+      "A teoria tem um corpo teórico-metodológico fechado desde a sua origem",
+      "O sincretismo de origem é comum a todas as teorias psicológicas, incluindo a psicanálise",
+      "O sincretismo é uma característica exclusiva da Psicologia Transpessoal",
+      "Nenhuma teoria pode ser criticada por integrar múltiplos conhecimentos"
+    ],
+    "correta": 1,
+    "explica": "A aula demonstra que nenhuma teoria psicológica nasceu com um corpo fechado. A psicanálise começou no estudo da hipnose, e Freud desenvolveu a associação livre ao perceber as limitações. Exigir isso apenas da Psicologia Transpessoal seria um duplo critério."
+  },
+  {
+    "p": "Qual é o fundamento institucional da negação do Conselho Federal de Psicologia (CFP) à Psicologia Transpessoal?",
+    "opcoes": [
+      "A falta de comprovação empírica dos seus métodos",
+      "O critério de que apenas teorias nascidas em laboratório com testes em animais merecem estatuto científico",
+      "A impossibilidade de quantificar a dimensão espiritual do ser humano",
+      "A confusão conceptual entre espiritualidade e religião"
+    ],
+    "correta": 1,
+    "explica": "A aula identifica que o CFP usa o critério de origem laboratorial e experimental, rejeitando a Psicologia Transpessoal por não cumprir este requisito, ainda que a própria psicanálise também não o cumpra."
+  },
+  {
+    "p": "Como a Psicologia Transpessoal distingue espiritualidade de religião?",
+    "opcoes": [
+      "A espiritualidade é mais importante que a religião para a saúde",
+      "A espiritualidade é uma dimensão constitutiva do ser humano distinta de qualquer crença religiosa específica",
+      "A religião é uma forma de espiritualidade mais estruturada",
+      "A espiritualidade só existe em culturas não-ocidentais"
+    ],
+    "correta": 1,
+    "explica": "A aula enfatiza que a espiritualidade não é religião nem moralidade; é uma dimensão do ser humano que integra corpo, alma, mente e que influencia diretamente a formação da consciência, independentemente de crença religiosa."
+  },
+  {
+    "p": "O que significa autorrealização na leitura transpessoal baseada em Maslow?",
+    "opcoes": [
+      "Uma conquista opcional para sujeitos com elevada educação",
+      "O resultado de esforço individual para alcançar sucessos materiais",
+      "Um processo inato porque a evolução está inscrita no DNA humano",
+      "Uma fase da vida que surge apenas na meia-idade"
+    ],
+    "correta": 2,
+    "explica": "A aula defende que todo o sujeito é autorrealizado porque a evolução está inscrita no DNA. A autorrealização é o destino natural do processo evolutivo humano, coincidindo com a manifestação da consciência como expressão espiritual."
+  },
+  {
+    "p": "Quais são os meios reconhecidos pela Psicologia Transpessoal para provocar estados modificados de consciência?",
+    "opcoes": [
+      "Apenas medicamentos prescritos e técnicas laboratoriais controladas",
+      "Hipnose, meditação, transe xamânico, êxtase e substâncias psicodélicas",
+      "Somente práticas religiosas tradicionais de origem oriental",
+      "Ejercicios físicos intensos e privação de sono controlada"
+    ],
+    "correta": 1,
+    "explica": "A aula lista explicitamente hipnose, meditação, transe xamânico, êxtase e substâncias psicodélicas como meios comprovados de expansão da consciência reconhecidos pela abordagem transpessoal."
+  },
+  {
+    "p": "O que é normose e qual é a sua relação com comportamentos abusivos nas organizações?",
+    "opcoes": [
+      "Uma doença mental caracterizada por pensamento desorganizado",
+      "Crença colectiva de separatividade e dualismo que normaliza comportamentos abusivos colectivos",
+      "Um protocolo de normalização de práticas clínicas em ambientes organizacionais",
+      "A tendência natural dos grupos para estabelecerem regras de convivência"
+    ],
+    "correta": 1,
+    "explica": "A aula define normose como crença generalizada de separatividade que distorce a percepção da realidade e, nas organizações, leva à normalização de bullying, violência e agressividade relacional."
+  },
+  {
+    "p": "Como o filme Soul ilustra o conceito de propósito de vida segundo a perspectiva transpessoal?",
+    "opcoes": [
+      "Mostrando que o propósito é um destino fixo que nunca muda",
+      "Demonstrando que o propósito se descobre e revê no contacto com os outros e experiências vividas",
+      "Afirmando que o propósito deve ser sempre perseguido a qualquer custo",
+      "Indicando que apenas pessoas com talento especial têm propósito"
+    ],
+    "correta": 1,
+    "explica": "A aula mostra que Joe acreditava que o seu único propósito era tocar numa banda de jazz; ao alcançá-lo, descobre que a sensação esperada não surge, revelando que o propósito não é um destino fixo mas algo que se revê na convivência."
+  },
+  {
+    "p": "Quais são os três campos de aplicação da Psicologia Transpessoal fora do consultório, segundo a aula?",
+    "opcoes": [
+      "Desporto, turismo e lazer comunitário",
+      "Educação, saúde e organizações empresariais",
+      "Direito, política e media",
+      "Tecnologia, indústria e transportes"
+    ],
+    "correta": 1,
+    "explica": "A aula identifica educação (visão holística de todos os sujeitos), saúde (humanização e cuidados paliativos) e organizações (substituição da cultura competitiva por espaços colaborativos) como campos primários de aplicação."
+  },
+  {
+    "p": "Como a Psicologia Transpessoal define o ser humano holístico em relação à tríade corpo-mente-alma?",
+    "opcoes": [
+      "Uma dimensão é mais importante e deve ser desenvolvida prioritariamente",
+      "As três dimensões são interdependentes e devem ser desenvolvidas de forma equilibrada",
+      "Apenas a mente e a alma têm relevância; o corpo é secundário",
+      "Cada pessoa escolhe qual dimensão priorizar conforme os seus interesses"
+    ],
+    "correta": 1,
+    "explica": "A aula enfatiza que o sujeito é entendido como uno e indivisível; nenhuma das três dimensões pode ser mais relevante do que as outras. A sobreposição de uma dimensão desequilibra o desenvolvimento integral."
+  }
+]
