@@ -11,9 +11,10 @@ export function generateStaticParams() {
 }
 
 // Manual de uma cadeira como PDF renderizado pela própria app (@react-pdf):
-// documento real, paginado, com capa, uma unidade por página (objetivos +
-// resumo + lista de aulas) e numeração. Mostrado num visualizador embutido,
-// com botão para descarregar. Genérico — serve qualquer cadeira dos 3 cursos.
+// documento real, paginado, com capa, Apresentação da cadeira e uma secção por
+// unidade (objetivos + resumo + lista de aulas), com numeração. Mostrado num
+// visualizador embutido, com botão para descarregar. Genérico — serve qualquer
+// cadeira de qualquer curso (mesma rota dinâmica, mesmo motor).
 export default function ManualPage({ params }) {
   const found = getCadeira(params.curso, params.cadeira);
   if (!found) return <div className="empty">Disciplina não encontrada.</div>;
